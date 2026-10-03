@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "spam-detection-benchmark",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  // Workers AI binding. Inference runs remotely even under `wrangler dev`.
+  "ai": { "binding": "AI" }
+}
