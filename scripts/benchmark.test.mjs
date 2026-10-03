@@ -224,7 +224,7 @@ test("createReport and renderMarkdown omit email content and secrets", () => {
     samples,
     corpus: { source: "https://example.org/", archives: [], groups: [{ name: "spam" }, { name: "easy_ham" }], samplePerGroup: 1, seed: "s", uniqueContentCounts: {} },
     transport: { name: "workers-ai-binding", detail: "test" },
-    hashes: { "scripts/lib.mjs": "abc" },
+    hashes: { "src/lib.mjs": "abc" },
     run: { generatedAt: "2026-01-01T00:00:00.000Z", models: ["clef"], node: "v24" },
   });
   const json = JSON.stringify(report);
