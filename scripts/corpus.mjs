@@ -7,35 +7,35 @@ import { promisify } from "node:util";
 import { mkdir, readdir, readFile, writeFile, access } from "node:fs/promises";
 import path from "node:path";
 import { simpleParser } from "mailparser";
-import { buildEmailState } from "./lib.mjs";
+import { buildEmailState } from "../src/lib.mjs";
 
 const execFileAsync = promisify(execFile);
 
 export const CORPUS_BASE_URL = "https://spamassassin.apache.org/old/publiccorpus/";
 
-export const CORPUS_ARCHIVES = Object.freeze([
-  Object.freeze({
+export const CORPUS_ARCHIVES = [
+  {
     name: "easy_ham",
     label: "ham",
     file: "20030228_easy_ham.tar.bz2",
     directory: "easy_ham",
     sha256: "2b7b65904bcfcc31d2b5f51946f2d261370b257402cbbd62930b46ab83367438",
-  }),
-  Object.freeze({
+  },
+  {
     name: "hard_ham",
     label: "ham",
     file: "20030228_hard_ham.tar.bz2",
     directory: "hard_ham",
     sha256: "ce2ce67880643dbde65ea7f85bffbfe4417349c4bd80b6b0de56262ae6b0a9c9",
-  }),
-  Object.freeze({
+  },
+  {
     name: "spam",
     label: "spam",
     file: "20030228_spam.tar.bz2",
     directory: "spam",
     sha256: "c08debc32413804949a866be45ef78195cec2cbafd1da744ed76cdb860589743",
-  }),
-]);
+  },
+];
 
 export const DEFAULT_CACHE_DIR = path.resolve(".cache");
 
@@ -152,20 +152,14 @@ function htmlToText(html) {
 /** Decode a raw RFC 822 message into the fields the benchmark uses. */
 export async function decodeMessage(raw) {
   const parsed = await simpleParser(raw, { skipImageLinks: true, skipTextToHtml: true });
-  const header = (name) => {
-    const value = parsed.headers.get(name);
-    if (value == null) return "";
-    if (typeof value === "string") return value;
-    if (Array.isArray(value)) return value.map((v) => (typeof v === "string" ? v : v?.text ?? "")).join(", ");
-    return value.text ?? value.value ?? String(value);
-  };
-  const body = parsed.text && parsed.text.trim() ? parsed.text : parsed.html ? htmlToText(parsed.html) : "";
+  const precedence = parsed.headers.get("precedence");
   return {
-    from: parsed.from?.text ?? header("from"),
+    from: parsed.from?.text ?? "",
     subject: parsed.subject ?? "",
-    listUnsubscribe: parsed.headers.get("list")?.unsubscribe != null || parsed.headers.has("list-unsubscribe"),
-    precedence: header("precedence"),
-    body,
+    // mailparser folds List-* headers into a single "list" object.
+    listUnsubscribe: parsed.headers.get("list")?.unsubscribe != null,
+    precedence: Array.isArray(precedence) ? precedence.join(", ") : precedence ?? "",
+    body: parsed.text?.trim() ? parsed.text : parsed.html ? htmlToText(parsed.html) : "",
   };
 }
 

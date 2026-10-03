@@ -13,7 +13,7 @@
     "deploy": "wrangler deploy",
     "benchmark": "node scripts/benchmark.mjs",
     "lint": "eslint .",
-    "check": "node --check scripts/lib.mjs && node --check scripts/corpus.mjs && node --check scripts/benchmark.mjs && node --check src/worker.mjs",
+    "check": "node --check src/lib.mjs && node --check scripts/corpus.mjs && node --check scripts/benchmark.mjs && node --check src/worker.mjs",
     "test": "node --test"
   },
   "dependencies": {

@@ -2,47 +2,44 @@
 // response parsing, metrics and Markdown rendering. This module is imported by
 // both the Node CLI and the Worker, so it must not use Node-only APIs.
 
-export const MODELS = Object.freeze({
-  gemma: Object.freeze({
+export const MODELS = {
+  gemma: {
     alias: "gemma",
     id: "@cf/google/gemma-4-26b-a4b-it",
     kind: "generative",
     output: "categorical verdict (spam/ham/unsure) as JSON; temperature 0; thinking disabled; 64 completion tokens",
-  }),
-  clef: Object.freeze({
+  },
+  clef: {
     alias: "clef",
     id: "@cf/cloudflare/clef",
     kind: "clef",
     selector: "clef",
     output: "typed `noul` spam probability",
-  }),
-  "clef-flash": Object.freeze({
+  },
+  "clef-flash": {
     alias: "clef-flash",
     id: "@cf/cloudflare/clef-flash",
     kind: "clef",
     selector: "clef-flash",
     output: "typed `noul` spam probability",
-  }),
-});
+  },
+};
 
-export const MODEL_ALIASES = Object.freeze(Object.keys(MODELS));
+export const MODEL_ALIASES = Object.keys(MODELS);
 
-export const THRESHOLDS = Object.freeze([0.5, 0.75, 0.9, 0.95, 0.99]);
+export const THRESHOLDS = [0.5, 0.75, 0.9, 0.95, 0.99];
 
-export const FIELD_LIMITS = Object.freeze({
+export const FIELD_LIMITS = {
   from: 320,
   subject: 500,
   precedence: 100,
   body: 500,
-});
+};
 
 export const MAX_ERROR_RATE = 0.05;
 
-export function resolveModel(aliasOrId) {
-  if (typeof aliasOrId !== "string") return null;
-  const key = aliasOrId.trim();
-  if (MODELS[key]) return MODELS[key];
-  return Object.values(MODELS).find((m) => m.id === key) ?? null;
+export function resolveModel(alias) {
+  return MODELS[alias] ?? null;
 }
 
 function clip(value, limit) {

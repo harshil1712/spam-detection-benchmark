@@ -16,10 +16,10 @@ import {
   renderMarkdown,
   exceedsErrorGate,
   MAX_ERROR_RATE,
-} from "./lib.mjs";
+} from "../src/lib.mjs";
 import { CORPUS_ARCHIVES, CORPUS_BASE_URL, prepareCorpus, sampleCorpus, loadEmailState, uniqueContentCounts, sha256Hex } from "./corpus.mjs";
 
-export const DEFAULTS = Object.freeze({
+export const DEFAULTS = {
   samplePerGroup: 100,
   concurrency: 6,
   seed: "spam-detection-benchmark-v1",
@@ -28,7 +28,7 @@ export const DEFAULTS = Object.freeze({
   maxAttempts: 4,
   output: "report.json",
   summary: "report.md",
-});
+};
 
 const RETRYABLE_STATUS = new Set([429, 500, 502, 503, 504]);
 
@@ -166,31 +166,28 @@ async function classifyOnce({ workerUrl, workerToken, timeoutMs, fetchImpl }, jo
  * for the successful attempt.
  */
 export async function classifyWithRetry(options, job, { maxAttempts = DEFAULTS.maxAttempts, backoffMs = 500, sleepImpl = sleep } = {}) {
-  let lastError;
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+  for (let attempt = 1; ; attempt++) {
     try {
       const body = await classifyOnce(options, job);
       return { result: body.result, latencyMs: body.latencyMs, attempts: attempt };
     } catch (error) {
-      lastError = error;
-      if (!(error instanceof ClassifyError) || !error.retryable || attempt === maxAttempts) break;
+      if (!(error instanceof ClassifyError)) throw error;
+      if (!error.retryable || attempt === maxAttempts) return { error: error.message, attempts: attempt };
       await sleepImpl(backoffMs * 2 ** (attempt - 1));
     }
   }
-  const message = lastError instanceof ClassifyError ? lastError.message : "Unexpected client error";
-  return { error: message, attempts: Math.min(maxAttempts, lastError?.attempts ?? maxAttempts) };
 }
 
 export async function scriptHashes(rootDir) {
-  const files = ["scripts/lib.mjs", "scripts/corpus.mjs", "scripts/benchmark.mjs", "src/worker.mjs", "package-lock.json"];
+  const files = ["src/lib.mjs", "scripts/corpus.mjs", "scripts/benchmark.mjs", "src/worker.mjs", "package-lock.json"];
   const entries = await Promise.all(
     files.map(async (file) => [file, sha256Hex(await readFile(path.join(rootDir, file)))]),
   );
   return Object.fromEntries(entries);
 }
 
-async function fetchWorkerHealth(options) {
-  const response = await fetch(`${options.workerUrl}/health`);
+async function fetchWorkerHealth(options, fetchImpl) {
+  const response = await fetchImpl(`${options.workerUrl}/health`);
   const body = await response.json().catch(() => null);
   if (!response.ok || !body?.ok) throw new Error(`Worker health check failed at ${options.workerUrl}/health (HTTP ${response.status})`);
   if (!body.binding) throw new Error("Worker is reachable but has no AI binding; check wrangler.jsonc");
@@ -199,7 +196,7 @@ async function fetchWorkerHealth(options) {
 export async function runBenchmark(options, { log = console.error, fetchImpl = fetch } = {}) {
   const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
   const startedAt = new Date();
-  await fetchWorkerHealth(options);
+  await fetchWorkerHealth(options, fetchImpl);
   const corpus = await prepareCorpus({ log });
   const samples = await sampleCorpus(corpus, { perGroup: options.samplePerGroup, seed: options.seed });
   log(`Prepared ${samples.length} samples (${options.samplePerGroup} per group)`);
@@ -240,7 +237,7 @@ export async function runBenchmark(options, { log = console.error, fetchImpl = f
       concurrency: options.concurrency,
       timeoutMs: options.timeoutMs,
       maxAttempts: DEFAULTS.maxAttempts,
-      retryOn: ["network error", "timeout", ...RETRYABLE_STATUS].map(String),
+      retryOn: ["network error", "timeout", ...RETRYABLE_STATUS],
     },
     hashes: await scriptHashes(rootDir),
     run: {

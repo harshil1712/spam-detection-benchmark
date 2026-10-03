@@ -14,7 +14,7 @@ import {
   exceedsErrorGate,
   FIELD_LIMITS,
   MODELS,
-} from "./lib.mjs";
+} from "../src/lib.mjs";
 import { deterministicSample, verifyArchive, decodeMessage, sha256Hex } from "./corpus.mjs";
 import { parseCliOptions, mapWithConcurrency, classifyWithRetry } from "./benchmark.mjs";
 

@@ -19,7 +19,7 @@ const post = (url, body, headers = {}) =>
 
 test("classify runs the binding with the resolved model ID and measures latency", async () => {
   const env = makeEnv();
-  const { status, body } = await classify(env, { model: "clef", input: { model: "clef", state: "s", questions: {} } });
+  const [status, body] = await classify(env, { model: "clef", input: { model: "clef", state: "s", questions: {} } });
   assert.equal(status, 200);
   assert.equal(body.ok, true);
   assert.equal(body.modelId, "@cf/cloudflare/clef");
@@ -30,18 +30,16 @@ test("classify runs the binding with the resolved model ID and measures latency"
 
 test("classify rejects unknown models and missing input without calling the binding", async () => {
   const env = makeEnv();
-  assert.equal((await classify(env, { model: "llama", input: {} })).status, 400);
-  assert.equal((await classify(env, { model: "gemma" })).status, 400);
+  assert.equal((await classify(env, { model: "llama", input: {} }))[0], 400);
+  assert.equal((await classify(env, { model: "gemma" }))[0], 400);
+  assert.equal((await classify(env))[0], 400);
   assert.equal(env.AI.calls.length, 0);
 });
 
-test("classify maps binding errors to retryable/non-retryable statuses without leaking the stack", async () => {
-  const transient = await classify(makeEnv({ fail: "AiError: 429 rate limited" }), { model: "gemma", input: { messages: [] } });
-  assert.equal(transient.status, 503);
-  assert.equal(transient.body.ok, false);
-  assert.equal(transient.body.error.message, "AiError: 429 rate limited");
-  const fatal = await classify(makeEnv({ fail: "bad request" }), { model: "gemma", input: { messages: [] } });
-  assert.equal(fatal.status, 502);
+test("classify reports binding errors as 502 with the message only", async () => {
+  const [status, body] = await classify(makeEnv({ fail: "AiError: 429 rate limited" }), { model: "gemma", input: { messages: [] } });
+  assert.equal(status, 502);
+  assert.deepEqual(body, { ok: false, modelId: "@cf/google/gemma-4-26b-a4b-it", error: "AiError: 429 rate limited" });
 });
 
 test("fetch handler: routing, local access without a token, and health", async () => {
