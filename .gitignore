@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+.wrangler/
+.dev.vars
+.env
+report.json
+report.md
+npm-debug.log*
