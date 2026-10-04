@@ -18,11 +18,11 @@ scripts/benchmark.ts ──POST /classify──▶ src/index.ts ──env.AI.run
     metrics, reports)                        latency measurement)
 ```
 
-1. **Corpus** (`scripts/corpus.ts`): downloads three archives of the [Apache SpamAssassin public corpus](https://spamassassin.apache.org/old/publiccorpus/) (`easy_ham`, `hard_ham`, `spam`), verifies pinned SHA-256 checksums, extracts them with `tar`, and samples N messages per group with a seeded, deterministic shuffle. Labels come from the corpus groups.
+1. **Corpus** (`scripts/corpus.ts`): downloads three archives of the [Apache SpamAssassin public corpus](https://spamassassin.apache.org/old/publiccorpus/) (`easy_ham`, `hard_ham`, `spam`), verifies pinned SHA-256 checksums, extracts them with `tar`, and samples N messages per group deterministically (sorted by `sha256(seed + filename)`). Labels come from the corpus groups.
 2. **Email state** (`src/lib.ts`): MIME is decoded with `mailparser`; HTML-only mail is converted to text. Every model receives the same bounded fields — From (≤320 chars), Subject (≤500), whether `List-Unsubscribe` is present, Precedence (≤100) and a whitespace-normalised body excerpt (≤500). Prompts tell the model the email is untrusted content.
 3. **Inference** (`src/index.ts`): the Worker exposes `POST /classify` with `{ model, input }`, calls `env.AI.run(modelId, input)` and returns the raw result plus the latency measured around the binding call. The CLI runs with bounded concurrency (default 6), a 60 s per-attempt timeout and up to four attempts with exponential backoff on network errors and HTTP 429/5xx. Authentication failures are not retried.
-4. **Metrics**: at thresholds 0.5, 0.75, 0.9, 0.95 and 0.99 the report lists the ham false-positive rate (primary metric), spam recall and flagged precision. Errors and Gemma's explicit `unsure` never flag mail but stay in the denominators. When zero ham false positives are observed, a one-sided 95% upper bound `1 - 0.05^(1/n)` is included. A run exits non-zero if any model's error rate exceeds 5% (an operational gate, not a quality gate).
-5. **Reports**: `report.json` (metrics, per-sample predictions keyed by opaque IDs and content hashes, request templates, script and corpus hashes, transport) and `report.md`. No email content, headers, credentials or account IDs are written.
+4. **Metrics**: at thresholds 0.5, 0.75, 0.9, 0.95 and 0.99 the report lists the ham false-positive rate (primary metric), spam recall and flagged precision. Errors and Gemma's explicit `unsure` never flag mail but stay in the denominators. When zero ham false positives are observed, a one-sided 95% upper bound `1 - 0.05^(1/n)` is included.
+5. **Reports**: `report.json` (metrics plus per-sample predictions keyed by opaque IDs and content hashes) and `report.md`. No email content, headers, credentials or account IDs are written.
 
 ## Running it yourself
 
@@ -62,7 +62,6 @@ A deployed Worker refuses `/classify` until `BENCHMARK_TOKEN` is set, so a publi
 --models <list>          default gemma,clef,clef-flash
 --seed <string>          sampling seed (default spam-detection-benchmark-v1)
 --worker-url <url>       default $BENCHMARK_WORKER_URL or http://127.0.0.1:8787
---output / --summary     report paths (default report.json / report.md)
 ```
 
 To refresh the published results, copy `report.json` and `report.md` to `results/latest.json` and `results/latest.md`.
@@ -83,10 +82,10 @@ CI runs the same checks plus a `wrangler deploy --dry-run` on pushes and pull re
 ## Limitations
 
 - The SpamAssassin corpus dates from 2002–2003 and does not reflect modern phishing or personal inbox preferences. Training-data contamination cannot be ruled out.
-- The sample is small and the ham/spam balance is artificial. Messages are not deduplicated; the report lists unique-content counts per group.
+- The sample is small and the ham/spam balance is artificial.
 - Thresholds are inspected on the same sample they are reported on, not on a held-out set.
 - Latency is wall-clock time around `env.AI.run()` inside the Worker during one run; it is not a controlled latency benchmark.
-- Gemma and Clef receive the same email state but necessarily different prompts (generative vs. typed decision). Full request templates are in the JSON report.
+- Gemma and Clef receive the same email state but necessarily different prompts (generative vs. typed decision). The exact request bodies are built in `src/lib.ts` (`buildModelInput`).
 - This project does not choose a production threshold or change any mail delivery.
 
 ## License
