@@ -11,7 +11,7 @@ import type { EmailFields, Label, Sample } from '../src/lib.ts';
 const BASE_URL = 'https://spamassassin.apache.org/old/publiccorpus/';
 const CACHE_DIR = path.resolve('.cache');
 
-export const ARCHIVES: Array<{ group: string; label: Label; file: string; sha256: string }> = [
+const ARCHIVES: Array<{ group: string; label: Label; file: string; sha256: string }> = [
 	{
 		group: 'easy_ham',
 		label: 'ham',
@@ -32,7 +32,7 @@ export const ARCHIVES: Array<{ group: string; label: Label; file: string; sha256
 	},
 ];
 
-export const sha256Hex = (data: Buffer | string) => createHash('sha256').update(data).digest('hex');
+const sha256Hex = (data: Buffer | string) => createHash('sha256').update(data).digest('hex');
 
 const exists = (file: string) =>
 	access(file).then(
@@ -40,13 +40,13 @@ const exists = (file: string) =>
 		() => false,
 	);
 
-export async function verifyArchive(file: string, expected: string): Promise<void> {
+async function verifyArchive(file: string, expected: string): Promise<void> {
 	const actual = sha256Hex(await readFile(file));
 	if (actual !== expected) throw new Error(`Checksum mismatch for ${path.basename(file)}: expected ${expected}, got ${actual}`);
 }
 
 /** Same seed + corpus => same sample, independent of directory order. */
-export function deterministicSample(files: string[], count: number, seed: string): string[] {
+function deterministicSample(files: string[], count: number, seed: string): string[] {
 	return files
 		.map((file) => ({ file, key: sha256Hex(`${seed}:${file}`) }))
 		.sort((a, b) => a.key.localeCompare(b.key))

@@ -21,7 +21,7 @@ import { sampleCorpus, decodeMessage } from './corpus.ts';
 
 const RETRYABLE = new Set([0, 429, 500, 502, 503, 504]);
 
-export interface Transport {
+interface Transport {
 	workerUrl: string;
 	token?: string;
 	fetchImpl?: typeof fetch;
@@ -29,7 +29,7 @@ export interface Transport {
 }
 
 /** POST one request to the Worker, retrying network errors, timeouts and 429/5xx with backoff. */
-export async function classify(
+async function classify(
 	{ workerUrl, token, fetchImpl = fetch, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }: Transport,
 	model: ModelAlias,
 	input: object,
@@ -58,7 +58,7 @@ export async function classify(
 }
 
 /** Run `fn` over `items` with at most `limit` in flight, preserving order. */
-export async function mapWithConcurrency<T, R>(items: T[], limit: number, fn: (item: T) => Promise<R>): Promise<R[]> {
+async function mapWithConcurrency<T, R>(items: T[], limit: number, fn: (item: T) => Promise<R>): Promise<R[]> {
 	const results = new Array<R>(items.length);
 	let next = 0;
 	await Promise.all(
