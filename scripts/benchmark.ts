@@ -66,12 +66,11 @@ const clip = (s: unknown, n: number) =>
 /** The bounded text every model sees. */
 async function renderEmail(file: string): Promise<string> {
 	const mail = await simpleParser(readFileSync(file), { skipImageLinks: true, skipTextToHtml: true });
-	const list = mail.headers.get('list') as { unsubscribe?: unknown } | undefined;
 	const body = mail.text?.trim() || (mail.html ? mail.html.replace(/<[^>]+>/g, ' ') : '');
 	return [
 		`From: ${clip(mail.from?.text, 320)}`,
 		`Subject: ${clip(mail.subject, 500)}`,
-		`List-Unsubscribe header present: ${list?.unsubscribe ? 'yes' : 'no'}`,
+		`List-Unsubscribe header present: ${mail.headerLines.some((h) => h.key === 'list-unsubscribe') ? 'yes' : 'no'}`,
 		`Precedence: ${clip(mail.headers.get('precedence'), 100) || '(none)'}`,
 		'',
 		'Body (truncated):',
@@ -95,10 +94,16 @@ function modelInput(model: Model, email: string): object {
 	return { model, state: email, questions: { spam: { type: 'noul', instructions: CLEF_QUESTION, criteria } } };
 }
 
+/** The parts of the raw model output we read. */
+interface ModelOutput {
+	answers?: { spam?: { noul?: unknown } };
+	choices?: Array<{ message?: { content?: unknown } }>;
+}
+
 /** P(spam) in [0, 1]; null when Gemma says "unsure" or the output is unreadable. */
-function spamScore(model: Model, result: any): number | null {
-	if (model !== 'gemma') return typeof result?.answers?.spam?.noul === 'number' ? result.answers.spam.noul : null;
-	const verdict = /"verdict"\s*:\s*"(spam|ham|unsure)"/i.exec(result?.choices?.[0]?.message?.content ?? '')?.[1]?.toLowerCase();
+function spamScore(model: Model, result: ModelOutput): number | null {
+	if (model !== 'gemma') return typeof result.answers?.spam?.noul === 'number' ? result.answers.spam.noul : null;
+	const verdict = /"verdict"\s*:\s*"(spam|ham|unsure)"/i.exec(String(result.choices?.[0]?.message?.content ?? ''))?.[1]?.toLowerCase();
 	return verdict === 'spam' ? 1 : verdict === 'ham' ? 0 : null;
 }
 
@@ -111,37 +116,50 @@ async function classify(model: Model, email: string) {
 			signal: AbortSignal.timeout(60_000),
 		});
 		if (!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
-		const { result, latencyMs } = (await res.json()) as { result: unknown; latencyMs: number };
+		const { result, latencyMs } = (await res.json()) as { result: ModelOutput; latencyMs: number };
 		return { score: spamScore(model, result), latencyMs };
 	} catch (error) {
 		return { score: null, error: String(error) };
 	}
 }
 
-const rows: Array<{ id: string; spam: boolean; model: Model; score: number | null; latencyMs?: number; error?: string }> = [];
+interface Row {
+	id: string;
+	spam: boolean;
+	model: Model;
+	score: number | null;
+	latencyMs?: number;
+	error?: string;
+}
+
+const rows: Row[] = [];
 for (const group of GROUPS) {
 	const files = await loadGroup(group);
 	for (let i = 0; i < files.length; i += BATCH) {
 		const batch = files.slice(i, i + BATCH);
 		const emails = await Promise.all(batch.map(renderEmail));
-		await Promise.all(
-			emails.flatMap((email, j) =>
-				MODELS.map(async (model) => {
-					const id = batch[j].replace('.cache/', '');
-					rows.push({ id, spam: group.spam, model, ...(await classify(model, email)) });
-				}),
-			),
+		rows.push(
+			...(await Promise.all(
+				emails.flatMap((email, j) =>
+					MODELS.map(async (model) => ({
+						id: batch[j].replace('.cache/', ''),
+						spam: group.spam,
+						model,
+						...(await classify(model, email)),
+					})),
+				),
+			)),
 		);
 		console.error(`${group.name}: ${Math.min(i + BATCH, files.length)}/${files.length}`);
 	}
 }
 
-const flagged = (xs: typeof rows, t: number) => xs.filter((r) => r.score !== null && r.score >= t).length;
+const flagged = (xs: Row[], t: number) => xs.filter((r) => r.score !== null && r.score >= t).length;
 const summary = MODELS.map((model) => {
 	const mine = rows.filter((r) => r.model === model);
 	const ham = mine.filter((r) => !r.spam);
 	const spam = mine.filter((r) => r.spam);
-	const ok = mine.filter((r) => r.latencyMs !== undefined);
+	const latencies = mine.flatMap((r) => (r.latencyMs === undefined ? [] : [r.latencyMs]));
 	return {
 		model,
 		'ham flagged @0.5': `${flagged(ham, 0.5)}/${ham.length}`,
@@ -150,7 +168,7 @@ const summary = MODELS.map((model) => {
 		'spam caught @0.9': `${flagged(spam, 0.9)}/${spam.length}`,
 		unsure: mine.filter((r) => r.score === null && !r.error).length,
 		errors: mine.filter((r) => r.error).length,
-		'avg ms': ok.length ? Math.round(ok.reduce((sum, r) => sum + r.latencyMs!, 0) / ok.length) : null,
+		'avg ms': latencies.length ? Math.round(latencies.reduce((a, b) => a + b, 0) / latencies.length) : null,
 	};
 });
 console.table(summary);
