@@ -2,7 +2,7 @@
 	"name": "spam-detection-benchmark",
 	"version": "0.1.0",
 	"private": true,
-	"description": "Reproducible benchmark of Workers AI models (Gemma, Clef, Clef-Flash) for email spam classification, run through a Worker AI binding",
+	"description": "One-time benchmark of Workers AI models (Gemma, Clef, Clef-Flash) for email spam classification, run through a Worker AI binding",
 	"license": "MIT",
 	"type": "module",
 	"engines": {
@@ -10,7 +10,6 @@
 	},
 	"scripts": {
 		"dev": "wrangler dev",
-		"deploy": "wrangler deploy",
 		"benchmark": "node scripts/benchmark.ts",
 		"typecheck": "tsc",
 		"format": "prettier --write .",

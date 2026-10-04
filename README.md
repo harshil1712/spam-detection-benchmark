@@ -1,91 +1,47 @@
 # Workers AI spam detection benchmark
 
-An independent, reproducible benchmark comparing three [Workers AI](https://developers.cloudflare.com/workers-ai/) models for email spam classification:
+A small, reproducible benchmark comparing three [Workers AI](https://developers.cloudflare.com/workers-ai/) models for email spam classification:
 
-| Alias        | Model                           | Interface                                                                                                                     |
-| ------------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `gemma`      | `@cf/google/gemma-4-26b-a4b-it` | Generative chat; asked for a JSON verdict (`spam` / `ham` / `unsure`), temperature 0, thinking disabled, 64 completion tokens |
-| `clef`       | `@cf/cloudflare/clef`           | Typed decision model; one `noul` question returns P(spam)                                                                     |
-| `clef-flash` | `@cf/cloudflare/clef-flash`     | Same as Clef, smaller/faster model                                                                                            |
+| Alias        | Model                           | Interface                                                                            |
+| ------------ | ------------------------------- | ------------------------------------------------------------------------------------ |
+| `gemma`      | `@cf/google/gemma-4-26b-a4b-it` | Generative chat; asked for a JSON verdict (`spam` / `ham` / `unsure`), temperature 0 |
+| `clef`       | `@cf/cloudflare/clef`           | Typed decision model; one `noul` question returns P(spam)                            |
+| `clef-flash` | `@cf/cloudflare/clef-flash`     | Same as Clef, smaller/faster model                                                   |
 
-All inference goes through a Worker's **AI binding** (`env.AI.run()`), not the REST API. The latest results live in [`results/latest.md`](results/latest.md) and [`results/latest.json`](results/latest.json).
+All inference goes through a Worker's **AI binding** (`env.AI.run()`), not the REST API. Results are committed as [`results.json`](results.json).
 
 ## How it works
 
+Two files:
+
+- `src/index.ts` — a 20-line Worker: `POST { model, input }` → `env.AI.run(modelId, input)` → `{ result, latencyMs }`. Run it locally with `npm run dev`; the AI binding does remote inference even in local dev, so nothing is deployed.
+- `scripts/benchmark.ts` — a Node script that downloads the [SpamAssassin public corpus](https://spamassassin.apache.org/old/publiccorpus/) (`easy_ham`, `hard_ham`, `spam`; SHA-256 pinned), takes the first 100 messages of each group, decodes them with `mailparser` into a bounded text (From, Subject, List-Unsubscribe present, Precedence, first 500 chars of body), sends every email to each model via the Worker, and prints a table:
+
 ```
-scripts/benchmark.ts ──POST /classify──▶ src/index.ts ──env.AI.run()──▶ Workers AI
-   (Node: corpus, sampling,                 (Worker: AI binding,
-    metrics, reports)                        latency measurement)
+model       | ham flagged @0.5 | spam caught @0.5 | ham flagged @0.9 | spam caught @0.9 | unsure | errors | avg ms
 ```
 
-1. **Corpus** (`scripts/corpus.ts`): downloads three archives of the [Apache SpamAssassin public corpus](https://spamassassin.apache.org/old/publiccorpus/) (`easy_ham`, `hard_ham`, `spam`), verifies pinned SHA-256 checksums, extracts them with `tar`, and samples N messages per group deterministically (sorted by `sha256(seed + filename)`). Labels come from the corpus groups.
-2. **Email state** (`src/lib.ts`): MIME is decoded with `mailparser`; HTML-only mail is converted to text. Every model receives the same bounded fields — From (≤320 chars), Subject (≤500), whether `List-Unsubscribe` is present, Precedence (≤100) and a whitespace-normalised body excerpt (≤500). Prompts tell the model the email is untrusted content.
-3. **Inference** (`src/index.ts`): the Worker exposes `POST /classify` with `{ model, input }`, calls `env.AI.run(modelId, input)` and returns the raw result plus the latency measured around the binding call. The CLI runs with bounded concurrency (default 6), a 60 s per-attempt timeout and up to four attempts with exponential backoff on network errors and HTTP 429/5xx. Authentication failures are not retried.
-4. **Metrics**: at thresholds 0.5, 0.75, 0.9, 0.95 and 0.99 the report lists the ham false-positive rate (primary metric), spam recall and flagged precision. Errors and Gemma's explicit `unsure` never flag mail but stay in the denominators. When zero ham false positives are observed, a one-sided 95% upper bound `1 - 0.05^(1/n)` is included.
-5. **Reports**: `report.json` (metrics plus per-sample predictions keyed by opaque IDs and content hashes) and `report.md`. No email content, headers, credentials or account IDs are written.
+"Ham flagged" (legitimate mail marked as spam) is the number to minimise. Gemma gives a categorical verdict, so its score is 0 or 1 and both thresholds read the same; Clef returns a probability. `results.json` also holds one row per (message, model) with the message's corpus filename and score — never the email text.
 
 ## Running it yourself
 
-Requirements: Node.js 22.18+ (runs the TypeScript CLI directly via type stripping), `tar` with bzip2 support, and a Cloudflare account with Workers AI enabled. Inference is billed to your account.
+Requirements: Node.js 22.18+, `tar` with bzip2 support, and a Cloudflare account with Workers AI enabled (inference is billed to your account).
 
 ```sh
 npm ci
-npx wrangler login            # or export CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID
+npx wrangler login       # or export CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID
+npm run dev              # Worker on http://127.0.0.1:8787
+npm run benchmark        # in another terminal; ~900 requests
 ```
 
-### Option A: local Worker via `wrangler dev` (simplest)
-
-The AI binding always runs inference remotely, even in local dev, so no deployment is needed.
-
-```sh
-npm run dev                   # Worker on http://127.0.0.1:8787
-npm run benchmark -- --sample-per-group 100 --concurrency 6
-```
-
-### Option B: deployed Worker
-
-```sh
-npx wrangler secret put BENCHMARK_TOKEN      # any long random string
-npm run deploy
-BENCHMARK_WORKER_URL=https://spam-detection-benchmark.<subdomain>.workers.dev \
-BENCHMARK_WORKER_TOKEN=<same string> \
-npm run benchmark
-```
-
-A deployed Worker refuses `/classify` until `BENCHMARK_TOKEN` is set, so a public URL cannot run inference on your account.
-
-### CLI options
-
-```
---sample-per-group <n>   1-500 messages per group (default 100 → 300 messages, 900 requests)
---concurrency <n>        1-20 in-flight requests (default 6)
---models <list>          default gemma,clef,clef-flash
---seed <string>          sampling seed (default spam-detection-benchmark-v1)
---worker-url <url>       default $BENCHMARK_WORKER_URL or http://127.0.0.1:8787
-```
-
-To refresh the published results, copy `report.json` and `report.md` to `results/latest.json` and `results/latest.md`.
-
-## Development
-
-The project follows the layout generated by `npm create cloudflare@latest` (TypeScript, `wrangler.jsonc`, prettier).
-
-```sh
-npm run typecheck   # tsc over src/, scripts/ and test/
-npm run format      # prettier
-npm run cf-typegen  # regenerate worker-configuration.d.ts after changing bindings
-```
-
-CI runs the same checks plus a `wrangler deploy --dry-run`; it never runs paid inference. There is no test suite — the benchmark run itself is the check.
+Settings (messages per group, concurrency, prompts) are constants at the top of `scripts/benchmark.ts`. The Worker has no authentication — keep it on localhost; don't deploy it as-is.
 
 ## Limitations
 
-- The SpamAssassin corpus dates from 2002–2003 and does not reflect modern phishing or personal inbox preferences. Training-data contamination cannot be ruled out.
-- The sample is small and the ham/spam balance is artificial.
-- Thresholds are inspected on the same sample they are reported on, not on a held-out set.
-- Latency is wall-clock time around `env.AI.run()` inside the Worker during one run; it is not a controlled latency benchmark.
-- Gemma and Clef receive the same email state but necessarily different prompts (generative vs. typed decision). The exact request bodies are built in `src/lib.ts` (`buildModelInput`).
-- This project does not choose a production threshold or change any mail delivery.
+- The SpamAssassin corpus is from 2002–2003 and may be in the models' training data; it says little about modern phishing or personal inbox preferences.
+- 300 messages is a small sample and the ham/spam balance is artificial.
+- Latency is wall-clock time around `env.AI.run()` during one run, not a controlled latency benchmark.
+- This project does not pick a production threshold or change any mail delivery.
 
 ## License
 
