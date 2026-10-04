@@ -2,34 +2,34 @@
 
 An independent, reproducible benchmark comparing three [Workers AI](https://developers.cloudflare.com/workers-ai/) models for email spam classification:
 
-| Alias | Model | Interface |
-|---|---|---|
-| `gemma` | `@cf/google/gemma-4-26b-a4b-it` | Generative chat; asked for a JSON verdict (`spam` / `ham` / `unsure`), temperature 0, thinking disabled, 64 completion tokens |
-| `clef` | `@cf/cloudflare/clef` | Typed decision model; one `noul` question returns P(spam) |
-| `clef-flash` | `@cf/cloudflare/clef-flash` | Same as Clef, smaller/faster model |
+| Alias        | Model                           | Interface                                                                                                                     |
+| ------------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `gemma`      | `@cf/google/gemma-4-26b-a4b-it` | Generative chat; asked for a JSON verdict (`spam` / `ham` / `unsure`), temperature 0, thinking disabled, 64 completion tokens |
+| `clef`       | `@cf/cloudflare/clef`           | Typed decision model; one `noul` question returns P(spam)                                                                     |
+| `clef-flash` | `@cf/cloudflare/clef-flash`     | Same as Clef, smaller/faster model                                                                                            |
 
 All inference goes through a Worker's **AI binding** (`env.AI.run()`), not the REST API. The latest results live in [`results/latest.md`](results/latest.md) and [`results/latest.json`](results/latest.json).
 
 ## How it works
 
 ```
-scripts/benchmark.mjs ──POST /classify──▶ src/worker.mjs ──env.AI.run()──▶ Workers AI
+scripts/benchmark.ts ──POST /classify──▶ src/index.ts ──env.AI.run()──▶ Workers AI
    (Node: corpus, sampling,                 (Worker: AI binding,
     metrics, reports)                        latency measurement)
 ```
 
-1. **Corpus** (`scripts/corpus.mjs`): downloads three archives of the [Apache SpamAssassin public corpus](https://spamassassin.apache.org/old/publiccorpus/) (`easy_ham`, `hard_ham`, `spam`), verifies pinned SHA-256 checksums, extracts them with `tar`, and samples N messages per group with a seeded, deterministic shuffle. Labels come from the corpus groups.
-2. **Email state** (`src/lib.mjs`): MIME is decoded with `mailparser`; HTML-only mail is converted to text. Every model receives the same bounded fields — From (≤320 chars), Subject (≤500), whether `List-Unsubscribe` is present, Precedence (≤100) and a whitespace-normalised body excerpt (≤500). Prompts tell the model the email is untrusted content.
-3. **Inference** (`src/worker.mjs`): the Worker exposes `POST /classify` with `{ model, input }`, calls `env.AI.run(modelId, input)` and returns the raw result plus the latency measured around the binding call. The CLI runs with bounded concurrency (default 6), a 60 s per-attempt timeout and up to four attempts with exponential backoff on network errors and HTTP 429/5xx. Authentication failures are not retried.
+1. **Corpus** (`scripts/corpus.ts`): downloads three archives of the [Apache SpamAssassin public corpus](https://spamassassin.apache.org/old/publiccorpus/) (`easy_ham`, `hard_ham`, `spam`), verifies pinned SHA-256 checksums, extracts them with `tar`, and samples N messages per group with a seeded, deterministic shuffle. Labels come from the corpus groups.
+2. **Email state** (`src/lib.ts`): MIME is decoded with `mailparser`; HTML-only mail is converted to text. Every model receives the same bounded fields — From (≤320 chars), Subject (≤500), whether `List-Unsubscribe` is present, Precedence (≤100) and a whitespace-normalised body excerpt (≤500). Prompts tell the model the email is untrusted content.
+3. **Inference** (`src/index.ts`): the Worker exposes `POST /classify` with `{ model, input }`, calls `env.AI.run(modelId, input)` and returns the raw result plus the latency measured around the binding call. The CLI runs with bounded concurrency (default 6), a 60 s per-attempt timeout and up to four attempts with exponential backoff on network errors and HTTP 429/5xx. Authentication failures are not retried.
 4. **Metrics**: at thresholds 0.5, 0.75, 0.9, 0.95 and 0.99 the report lists the ham false-positive rate (primary metric), spam recall and flagged precision. Errors and Gemma's explicit `unsure` never flag mail but stay in the denominators. When zero ham false positives are observed, a one-sided 95% upper bound `1 - 0.05^(1/n)` is included. A run exits non-zero if any model's error rate exceeds 5% (an operational gate, not a quality gate).
 5. **Reports**: `report.json` (metrics, per-sample predictions keyed by opaque IDs and content hashes, request templates, script and corpus hashes, transport) and `report.md`. No email content, headers, credentials or account IDs are written.
 
 ## Running it yourself
 
-Requirements: Node.js 22.13+ (or 24+), `tar` with bzip2 support, and a Cloudflare account with Workers AI enabled. Inference is billed to your account.
+Requirements: Node.js 22.18+ (runs the TypeScript CLI directly via type stripping), `tar` with bzip2 support, and a Cloudflare account with Workers AI enabled. Inference is billed to your account.
 
 ```sh
-npm ci --ignore-scripts
+npm ci
 npx wrangler login            # or export CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID
 ```
 
@@ -69,10 +69,13 @@ To refresh the published results, copy `report.json` and `report.md` to `results
 
 ## Development
 
+The project follows the layout generated by `npm create cloudflare@latest` (TypeScript, `wrangler.jsonc`, Vitest with `@cloudflare/vitest-plugin`).
+
 ```sh
-npm run lint     # eslint
-npm run check    # node --check on every module
-npm test         # credential-free regression tests (node:test)
+npm run typecheck   # tsc over src/, scripts/ and test/
+npm test            # vitest: Worker tests run inside workerd, CLI/corpus tests in Node
+npm run format      # prettier
+npm run cf-typegen  # regenerate worker-configuration.d.ts after changing bindings
 ```
 
 CI runs the same checks plus a `wrangler deploy --dry-run` on pushes and pull requests; it never runs paid inference.

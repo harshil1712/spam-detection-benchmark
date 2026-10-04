@@ -1,28 +1,33 @@
 {
-  "name": "spam-detection-benchmark",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Reproducible benchmark of Workers AI models (Gemma, Clef, Clef-Flash) for email spam classification, run through a Worker AI binding",
-  "license": "MIT",
-  "type": "module",
-  "engines": {
-    "node": ">=22.13"
-  },
-  "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "benchmark": "node scripts/benchmark.mjs",
-    "lint": "eslint .",
-    "check": "node --check src/lib.mjs && node --check scripts/corpus.mjs && node --check scripts/benchmark.mjs && node --check src/worker.mjs",
-    "test": "node --test"
-  },
-  "dependencies": {
-    "mailparser": "^3.9.33"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.12.0",
-    "globals": "^17.0.0",
-    "wrangler": "^4.147.0"
-  }
+	"name": "spam-detection-benchmark",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Reproducible benchmark of Workers AI models (Gemma, Clef, Clef-Flash) for email spam classification, run through a Worker AI binding",
+	"license": "MIT",
+	"type": "module",
+	"engines": {
+		"node": ">=22.18"
+	},
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy",
+		"benchmark": "node scripts/benchmark.ts",
+		"test": "vitest run",
+		"typecheck": "tsc && tsc -p test",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"mailparser": "^3.9.33"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-plugin": "^1.3.6",
+		"@types/mailparser": "^3.9.0",
+		"@types/node": "^26.6.4",
+		"prettier": "^3.9.9",
+		"typescript": "^5.9.3",
+		"vitest": "~4.1.0",
+		"wrangler": "^4.147.0"
+	}
 }

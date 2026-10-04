@@ -1,10 +1,21 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "spam-detection-benchmark",
-  "main": "src/worker.mjs",
-  "compatibility_date": "2026-09-01",
-  "workers_dev": true,
-  "observability": { "enabled": true },
-  // Workers AI binding. Inference runs remotely even under `wrangler dev`.
-  "ai": { "binding": "AI" }
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "spam-detection-benchmark",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-10-01",
+	"observability": {
+		"enabled": true,
+	},
+	"upload_source_maps": true,
+	/**
+	 * Workers AI binding used by src/index.ts (`env.AI.run`).
+	 * https://developers.cloudflare.com/workers-ai/configuration/bindings/
+	 */
+	"ai": {
+		"binding": "AI",
+	},
 }
