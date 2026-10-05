@@ -1,0 +1,31 @@
+README.md
+  s_19f571c49f1bbe::t_faf47a17f151de 11,17,24-36,40,44-50,53-55
+results.json
+  s_10e69ab27afc08::t_8f7b38ef378ee4 1-6338
+worker-configuration.d.ts
+  s_10e69ab27afc08::t_54e9f48250f59e 2,6,15-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "25fb7c1c675e6b42ff89a11813115d493c473c61",
+  "prompts": {},
+  "sessions": {
+    "s_10e69ab27afc08": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a10b9c-785f-7709-ad7a-923745a635d8",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Harshil Agrawal <harshil@cloudflare.com>"
+    },
+    "s_19f571c49f1bbe": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0ec46-1715-7460-9699-e1b5f6c2c85c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Harshil Agrawal <harshil@cloudflare.com>"
+    }
+  }
+}
