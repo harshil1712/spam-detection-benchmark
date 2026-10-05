@@ -1,0 +1,29 @@
+{
+	"name": "spam-detection-benchmark",
+	"version": "0.1.0",
+	"private": true,
+	"description": "One-time benchmark of Workers AI models (Gemma, Clef, Clef-Flash) for email spam classification, run through a Worker AI binding",
+	"license": "MIT",
+	"type": "module",
+	"engines": {
+		"node": ">=22.18"
+	},
+	"scripts": {
+		"dev": "wrangler dev",
+		"benchmark": "node scripts/benchmark.ts",
+		"typecheck": "tsc",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"mailparser": "^3.9.33"
+	},
+	"devDependencies": {
+		"@types/mailparser": "^3.9.0",
+		"@types/node": "^26.6.4",
+		"prettier": "^3.9.9",
+		"typescript": "^5.9.3",
+		"wrangler": "^4.147.0"
+	}
+}
