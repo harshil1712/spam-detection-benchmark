@@ -1,0 +1,6338 @@
+{
+  "generatedAt": "2026-10-05T10:58:11.619Z",
+  "perGroup": 100,
+  "summary": [
+    {
+      "model": "gemma",
+      "ham flagged @0.5": "70/200",
+      "spam caught @0.5": "100/100",
+      "ham flagged @0.9": "70/200",
+      "spam caught @0.9": "100/100",
+      "unsure": 0,
+      "errors": 0,
+      "avg ms": 587
+    },
+    {
+      "model": "clef",
+      "ham flagged @0.5": "34/200",
+      "spam caught @0.5": "100/100",
+      "ham flagged @0.9": "5/200",
+      "spam caught @0.9": "99/100",
+      "unsure": 0,
+      "errors": 0,
+      "avg ms": 383
+    },
+    {
+      "model": "clef-flash",
+      "ham flagged @0.5": "29/200",
+      "spam caught @0.5": "100/100",
+      "ham flagged @0.9": "9/200",
+      "spam caught @0.9": "100/100",
+      "unsure": 0,
+      "errors": 0,
+      "avg ms": 152
+    }
+  ],
+  "rows": [
+    {
+      "id": "easy_ham/00001.7c53336b37003a9286aba55d2945844c",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 307
+    },
+    {
+      "id": "easy_ham/00001.7c53336b37003a9286aba55d2945844c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.015,
+      "latencyMs": 231
+    },
+    {
+      "id": "easy_ham/00001.7c53336b37003a9286aba55d2945844c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0231,
+      "latencyMs": 408
+    },
+    {
+      "id": "easy_ham/00002.9c4069e25e1ef370c078db7ee85ff9ac",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 561
+    },
+    {
+      "id": "easy_ham/00002.9c4069e25e1ef370c078db7ee85ff9ac",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1709,
+      "latencyMs": 169
+    },
+    {
+      "id": "easy_ham/00002.9c4069e25e1ef370c078db7ee85ff9ac",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0168,
+      "latencyMs": 105
+    },
+    {
+      "id": "easy_ham/00003.860e3c3cee1b42ead714c5c874fe25f7",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 453
+    },
+    {
+      "id": "easy_ham/00003.860e3c3cee1b42ead714c5c874fe25f7",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1465,
+      "latencyMs": 820
+    },
+    {
+      "id": "easy_ham/00003.860e3c3cee1b42ead714c5c874fe25f7",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0252,
+      "latencyMs": 110
+    },
+    {
+      "id": "easy_ham/00004.864220c5b6930b209cc287c361c99af1",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 343
+    },
+    {
+      "id": "easy_ham/00004.864220c5b6930b209cc287c361c99af1",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1074,
+      "latencyMs": 177
+    },
+    {
+      "id": "easy_ham/00004.864220c5b6930b209cc287c361c99af1",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.027,
+      "latencyMs": 134
+    },
+    {
+      "id": "easy_ham/00005.bf27cdeaf0b8c4647ecd61b1d09da613",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 237
+    },
+    {
+      "id": "easy_ham/00005.bf27cdeaf0b8c4647ecd61b1d09da613",
+      "spam": false,
+      "model": "clef",
+      "score": 0.015,
+      "latencyMs": 355
+    },
+    {
+      "id": "easy_ham/00005.bf27cdeaf0b8c4647ecd61b1d09da613",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0229,
+      "latencyMs": 134
+    },
+    {
+      "id": "easy_ham/00006.253ea2f9a9cc36fa0b1129b04b806608",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 883
+    },
+    {
+      "id": "easy_ham/00006.253ea2f9a9cc36fa0b1129b04b806608",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0229,
+      "latencyMs": 928
+    },
+    {
+      "id": "easy_ham/00006.253ea2f9a9cc36fa0b1129b04b806608",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0223,
+      "latencyMs": 98
+    },
+    {
+      "id": "easy_ham/00007.37a8af848caae585af4fe35779656d55",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 272
+    },
+    {
+      "id": "easy_ham/00007.37a8af848caae585af4fe35779656d55",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0314,
+      "latencyMs": 286
+    },
+    {
+      "id": "easy_ham/00007.37a8af848caae585af4fe35779656d55",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0362,
+      "latencyMs": 114
+    },
+    {
+      "id": "easy_ham/00008.5891548d921601906337dcf1ed8543cb",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 257
+    },
+    {
+      "id": "easy_ham/00008.5891548d921601906337dcf1ed8543cb",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0164,
+      "latencyMs": 495
+    },
+    {
+      "id": "easy_ham/00008.5891548d921601906337dcf1ed8543cb",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0184,
+      "latencyMs": 302
+    },
+    {
+      "id": "easy_ham/00009.371eca25b0169ce5cb4f71d3e07b9e2d",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 322
+    },
+    {
+      "id": "easy_ham/00009.371eca25b0169ce5cb4f71d3e07b9e2d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0347,
+      "latencyMs": 494
+    },
+    {
+      "id": "easy_ham/00009.371eca25b0169ce5cb4f71d3e07b9e2d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0358,
+      "latencyMs": 160
+    },
+    {
+      "id": "easy_ham/00010.145d22c053c1a0c410242e46c01635b3",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 253
+    },
+    {
+      "id": "easy_ham/00010.145d22c053c1a0c410242e46c01635b3",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0208,
+      "latencyMs": 188
+    },
+    {
+      "id": "easy_ham/00010.145d22c053c1a0c410242e46c01635b3",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0208,
+      "latencyMs": 137
+    },
+    {
+      "id": "easy_ham/00011.fbcde1b4833bdbaaf0ced723edd6e355",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 269
+    },
+    {
+      "id": "easy_ham/00011.fbcde1b4833bdbaaf0ced723edd6e355",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0158,
+      "latencyMs": 420
+    },
+    {
+      "id": "easy_ham/00011.fbcde1b4833bdbaaf0ced723edd6e355",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0209,
+      "latencyMs": 116
+    },
+    {
+      "id": "easy_ham/00012.48a387bc38d1316a6f6b49e8c2e43a03",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 284
+    },
+    {
+      "id": "easy_ham/00012.48a387bc38d1316a6f6b49e8c2e43a03",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0113,
+      "latencyMs": 179
+    },
+    {
+      "id": "easy_ham/00012.48a387bc38d1316a6f6b49e8c2e43a03",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0223,
+      "latencyMs": 170
+    },
+    {
+      "id": "easy_ham/00013.81c34741dbed59c6dde50777e27e7ea3",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 277
+    },
+    {
+      "id": "easy_ham/00013.81c34741dbed59c6dde50777e27e7ea3",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0114,
+      "latencyMs": 219
+    },
+    {
+      "id": "easy_ham/00013.81c34741dbed59c6dde50777e27e7ea3",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0253,
+      "latencyMs": 106
+    },
+    {
+      "id": "easy_ham/00014.cb20e10b2bfcb8210a1c310798532a57",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 280
+    },
+    {
+      "id": "easy_ham/00014.cb20e10b2bfcb8210a1c310798532a57",
+      "spam": false,
+      "model": "clef",
+      "score": 0.015,
+      "latencyMs": 387
+    },
+    {
+      "id": "easy_ham/00014.cb20e10b2bfcb8210a1c310798532a57",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0208,
+      "latencyMs": 113
+    },
+    {
+      "id": "easy_ham/00015.4d7026347ba7478c9db04c70913e68fd",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 252
+    },
+    {
+      "id": "easy_ham/00015.4d7026347ba7478c9db04c70913e68fd",
+      "spam": false,
+      "model": "clef",
+      "score": 0.4659,
+      "latencyMs": 169
+    },
+    {
+      "id": "easy_ham/00015.4d7026347ba7478c9db04c70913e68fd",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0516,
+      "latencyMs": 151
+    },
+    {
+      "id": "easy_ham/00016.ef397cef16f8041242e3b6560e168053",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 275
+    },
+    {
+      "id": "easy_ham/00016.ef397cef16f8041242e3b6560e168053",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0129,
+      "latencyMs": 277
+    },
+    {
+      "id": "easy_ham/00016.ef397cef16f8041242e3b6560e168053",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.03,
+      "latencyMs": 125
+    },
+    {
+      "id": "easy_ham/00017.08ef2d89f14cf7e2a458b80697eb1837",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 248
+    },
+    {
+      "id": "easy_ham/00017.08ef2d89f14cf7e2a458b80697eb1837",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0178,
+      "latencyMs": 427
+    },
+    {
+      "id": "easy_ham/00017.08ef2d89f14cf7e2a458b80697eb1837",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0282,
+      "latencyMs": 118
+    },
+    {
+      "id": "easy_ham/00018.6fee38026193b5adde4b56892a6f14bc",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 337
+    },
+    {
+      "id": "easy_ham/00018.6fee38026193b5adde4b56892a6f14bc",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0113,
+      "latencyMs": 237
+    },
+    {
+      "id": "easy_ham/00018.6fee38026193b5adde4b56892a6f14bc",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0244,
+      "latencyMs": 152
+    },
+    {
+      "id": "easy_ham/00019.5322cb10d8819b39499924d852819c27",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 300
+    },
+    {
+      "id": "easy_ham/00019.5322cb10d8819b39499924d852819c27",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0329,
+      "latencyMs": 556
+    },
+    {
+      "id": "easy_ham/00019.5322cb10d8819b39499924d852819c27",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0271,
+      "latencyMs": 214
+    },
+    {
+      "id": "easy_ham/00020.d10651e31fcb92630c6229ec773cfe26",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 750
+    },
+    {
+      "id": "easy_ham/00020.d10651e31fcb92630c6229ec773cfe26",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0127,
+      "latencyMs": 368
+    },
+    {
+      "id": "easy_ham/00020.d10651e31fcb92630c6229ec773cfe26",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0265,
+      "latencyMs": 135
+    },
+    {
+      "id": "easy_ham/00021.607c41268c5b0d66e81b58713a66d12c",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 251
+    },
+    {
+      "id": "easy_ham/00021.607c41268c5b0d66e81b58713a66d12c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0192,
+      "latencyMs": 298
+    },
+    {
+      "id": "easy_ham/00021.607c41268c5b0d66e81b58713a66d12c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0222,
+      "latencyMs": 174
+    },
+    {
+      "id": "easy_ham/00022.48098f942c31097d2ef605df44dd8593",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 263
+    },
+    {
+      "id": "easy_ham/00022.48098f942c31097d2ef605df44dd8593",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0117,
+      "latencyMs": 217
+    },
+    {
+      "id": "easy_ham/00022.48098f942c31097d2ef605df44dd8593",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.024,
+      "latencyMs": 126
+    },
+    {
+      "id": "easy_ham/00023.e0e815ea1d7fd40e7e70b4c0035bef0c",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 364
+    },
+    {
+      "id": "easy_ham/00023.e0e815ea1d7fd40e7e70b4c0035bef0c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0112,
+      "latencyMs": 418
+    },
+    {
+      "id": "easy_ham/00023.e0e815ea1d7fd40e7e70b4c0035bef0c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0236,
+      "latencyMs": 129
+    },
+    {
+      "id": "easy_ham/00024.59c2cb781c60594315241e2b50ea70e2",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 301
+    },
+    {
+      "id": "easy_ham/00024.59c2cb781c60594315241e2b50ea70e2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.014,
+      "latencyMs": 397
+    },
+    {
+      "id": "easy_ham/00024.59c2cb781c60594315241e2b50ea70e2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0217,
+      "latencyMs": 224
+    },
+    {
+      "id": "easy_ham/00025.d685245bdc4444f44fa091e6620b20b3",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 253
+    },
+    {
+      "id": "easy_ham/00025.d685245bdc4444f44fa091e6620b20b3",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0149,
+      "latencyMs": 629
+    },
+    {
+      "id": "easy_ham/00025.d685245bdc4444f44fa091e6620b20b3",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0228,
+      "latencyMs": 138
+    },
+    {
+      "id": "easy_ham/00026.f9755fb0cee92676d7bd76d32bc5f50f",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 274
+    },
+    {
+      "id": "easy_ham/00026.f9755fb0cee92676d7bd76d32bc5f50f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0268,
+      "latencyMs": 694
+    },
+    {
+      "id": "easy_ham/00026.f9755fb0cee92676d7bd76d32bc5f50f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0195,
+      "latencyMs": 133
+    },
+    {
+      "id": "easy_ham/00027.4d456dd9ce0afde7629f94dc3034e0bb",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 329
+    },
+    {
+      "id": "easy_ham/00027.4d456dd9ce0afde7629f94dc3034e0bb",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0125,
+      "latencyMs": 264
+    },
+    {
+      "id": "easy_ham/00027.4d456dd9ce0afde7629f94dc3034e0bb",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0249,
+      "latencyMs": 185
+    },
+    {
+      "id": "easy_ham/00028.ddbae7c7b229813409ae50c47624ddb9",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 304
+    },
+    {
+      "id": "easy_ham/00028.ddbae7c7b229813409ae50c47624ddb9",
+      "spam": false,
+      "model": "clef",
+      "score": 0.025,
+      "latencyMs": 278
+    },
+    {
+      "id": "easy_ham/00028.ddbae7c7b229813409ae50c47624ddb9",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0216,
+      "latencyMs": 178
+    },
+    {
+      "id": "easy_ham/00029.56d4310a82386b76b9e771523d571e67",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 237
+    },
+    {
+      "id": "easy_ham/00029.56d4310a82386b76b9e771523d571e67",
+      "spam": false,
+      "model": "clef",
+      "score": 0.4001,
+      "latencyMs": 404
+    },
+    {
+      "id": "easy_ham/00029.56d4310a82386b76b9e771523d571e67",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0235,
+      "latencyMs": 158
+    },
+    {
+      "id": "easy_ham/00030.cc78e84cd398ff4a2e9e287263de928f",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 313
+    },
+    {
+      "id": "easy_ham/00030.cc78e84cd398ff4a2e9e287263de928f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.011,
+      "latencyMs": 398
+    },
+    {
+      "id": "easy_ham/00030.cc78e84cd398ff4a2e9e287263de928f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0233,
+      "latencyMs": 104
+    },
+    {
+      "id": "easy_ham/00031.ac7e81ff64671b17569d2c6a66648bb2",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 320
+    },
+    {
+      "id": "easy_ham/00031.ac7e81ff64671b17569d2c6a66648bb2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0785,
+      "latencyMs": 163
+    },
+    {
+      "id": "easy_ham/00031.ac7e81ff64671b17569d2c6a66648bb2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0245,
+      "latencyMs": 104
+    },
+    {
+      "id": "easy_ham/00032.57e29a75bca42afb412fc68d5051aa20",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 242
+    },
+    {
+      "id": "easy_ham/00032.57e29a75bca42afb412fc68d5051aa20",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0459,
+      "latencyMs": 425
+    },
+    {
+      "id": "easy_ham/00032.57e29a75bca42afb412fc68d5051aa20",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0358,
+      "latencyMs": 115
+    },
+    {
+      "id": "easy_ham/00033.2ceb520d2c6500ccf24357f2ebdce618",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 304
+    },
+    {
+      "id": "easy_ham/00033.2ceb520d2c6500ccf24357f2ebdce618",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0157,
+      "latencyMs": 306
+    },
+    {
+      "id": "easy_ham/00033.2ceb520d2c6500ccf24357f2ebdce618",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0994,
+      "latencyMs": 108
+    },
+    {
+      "id": "easy_ham/00034.1d56abea55f3c516d0ffdd4f1e8b883b",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 241
+    },
+    {
+      "id": "easy_ham/00034.1d56abea55f3c516d0ffdd4f1e8b883b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0119,
+      "latencyMs": 377
+    },
+    {
+      "id": "easy_ham/00034.1d56abea55f3c516d0ffdd4f1e8b883b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0264,
+      "latencyMs": 178
+    },
+    {
+      "id": "easy_ham/00035.9069e05ad40dd0f98cdae72072ee7186",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 277
+    },
+    {
+      "id": "easy_ham/00035.9069e05ad40dd0f98cdae72072ee7186",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0256,
+      "latencyMs": 438
+    },
+    {
+      "id": "easy_ham/00035.9069e05ad40dd0f98cdae72072ee7186",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0227,
+      "latencyMs": 105
+    },
+    {
+      "id": "easy_ham/00036.719795e8d4670c6d8095274b18b59749",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 291
+    },
+    {
+      "id": "easy_ham/00036.719795e8d4670c6d8095274b18b59749",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0119,
+      "latencyMs": 404
+    },
+    {
+      "id": "easy_ham/00036.719795e8d4670c6d8095274b18b59749",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0254,
+      "latencyMs": 246
+    },
+    {
+      "id": "easy_ham/00037.5a7af2f7bd57a2f50b7cfa05d5e37c29",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 465
+    },
+    {
+      "id": "easy_ham/00037.5a7af2f7bd57a2f50b7cfa05d5e37c29",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0166,
+      "latencyMs": 229
+    },
+    {
+      "id": "easy_ham/00037.5a7af2f7bd57a2f50b7cfa05d5e37c29",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0287,
+      "latencyMs": 109
+    },
+    {
+      "id": "easy_ham/00038.cd457af47eb78d4b93c7d94043a43108",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 240
+    },
+    {
+      "id": "easy_ham/00038.cd457af47eb78d4b93c7d94043a43108",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0121,
+      "latencyMs": 457
+    },
+    {
+      "id": "easy_ham/00038.cd457af47eb78d4b93c7d94043a43108",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0226,
+      "latencyMs": 241
+    },
+    {
+      "id": "easy_ham/00039.be5e34dcebd922928045634015e3ed78",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 1097
+    },
+    {
+      "id": "easy_ham/00039.be5e34dcebd922928045634015e3ed78",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0125,
+      "latencyMs": 577
+    },
+    {
+      "id": "easy_ham/00039.be5e34dcebd922928045634015e3ed78",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0356,
+      "latencyMs": 168
+    },
+    {
+      "id": "easy_ham/00040.eec48d76fbc04e9b98c3de0f59af97ac",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 289
+    },
+    {
+      "id": "easy_ham/00040.eec48d76fbc04e9b98c3de0f59af97ac",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0232,
+      "latencyMs": 476
+    },
+    {
+      "id": "easy_ham/00040.eec48d76fbc04e9b98c3de0f59af97ac",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.026,
+      "latencyMs": 138
+    },
+    {
+      "id": "easy_ham/00041.002af69a10eb9b6683a7cff5f3ac14b4",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 272
+    },
+    {
+      "id": "easy_ham/00041.002af69a10eb9b6683a7cff5f3ac14b4",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0649,
+      "latencyMs": 404
+    },
+    {
+      "id": "easy_ham/00041.002af69a10eb9b6683a7cff5f3ac14b4",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0305,
+      "latencyMs": 106
+    },
+    {
+      "id": "easy_ham/00042.efe6317ef2ebefe739aaeb4f0d51fbdb",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 228
+    },
+    {
+      "id": "easy_ham/00042.efe6317ef2ebefe739aaeb4f0d51fbdb",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0148,
+      "latencyMs": 374
+    },
+    {
+      "id": "easy_ham/00042.efe6317ef2ebefe739aaeb4f0d51fbdb",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0207,
+      "latencyMs": 136
+    },
+    {
+      "id": "easy_ham/00043.d2673a72d215cbdd747dc98cde41fbd2",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 348
+    },
+    {
+      "id": "easy_ham/00043.d2673a72d215cbdd747dc98cde41fbd2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.012,
+      "latencyMs": 391
+    },
+    {
+      "id": "easy_ham/00043.d2673a72d215cbdd747dc98cde41fbd2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0236,
+      "latencyMs": 152
+    },
+    {
+      "id": "easy_ham/00044.d087bf5e76ba737908b482cb028b056c",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 4559
+    },
+    {
+      "id": "easy_ham/00044.d087bf5e76ba737908b482cb028b056c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0156,
+      "latencyMs": 323
+    },
+    {
+      "id": "easy_ham/00044.d087bf5e76ba737908b482cb028b056c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0208,
+      "latencyMs": 240
+    },
+    {
+      "id": "easy_ham/00045.f0a8de2cf2b3cf745341b960d7a0119f",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 353
+    },
+    {
+      "id": "easy_ham/00045.f0a8de2cf2b3cf745341b960d7a0119f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0194,
+      "latencyMs": 305
+    },
+    {
+      "id": "easy_ham/00045.f0a8de2cf2b3cf745341b960d7a0119f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0237,
+      "latencyMs": 235
+    },
+    {
+      "id": "easy_ham/00046.c8491e68aa5652272d6511bb7d848d37",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 294
+    },
+    {
+      "id": "easy_ham/00046.c8491e68aa5652272d6511bb7d848d37",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0129,
+      "latencyMs": 304
+    },
+    {
+      "id": "easy_ham/00046.c8491e68aa5652272d6511bb7d848d37",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0206,
+      "latencyMs": 93
+    },
+    {
+      "id": "easy_ham/00047.39812fcb014cf9c22a2ff4fec61f3c19",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 273
+    },
+    {
+      "id": "easy_ham/00047.39812fcb014cf9c22a2ff4fec61f3c19",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0141,
+      "latencyMs": 176
+    },
+    {
+      "id": "easy_ham/00047.39812fcb014cf9c22a2ff4fec61f3c19",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0232,
+      "latencyMs": 188
+    },
+    {
+      "id": "easy_ham/00048.1e067f31e83cc6ea3e9103b52f15588e",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 370
+    },
+    {
+      "id": "easy_ham/00048.1e067f31e83cc6ea3e9103b52f15588e",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0382,
+      "latencyMs": 291
+    },
+    {
+      "id": "easy_ham/00048.1e067f31e83cc6ea3e9103b52f15588e",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0217,
+      "latencyMs": 154
+    },
+    {
+      "id": "easy_ham/00049.838d44b342e0ab4743507510a8ca206f",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 603
+    },
+    {
+      "id": "easy_ham/00049.838d44b342e0ab4743507510a8ca206f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0258,
+      "latencyMs": 350
+    },
+    {
+      "id": "easy_ham/00049.838d44b342e0ab4743507510a8ca206f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0187,
+      "latencyMs": 118
+    },
+    {
+      "id": "easy_ham/00050.74d3103c5691914a530dcae2f656a1f5",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 252
+    },
+    {
+      "id": "easy_ham/00050.74d3103c5691914a530dcae2f656a1f5",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0137,
+      "latencyMs": 1544
+    },
+    {
+      "id": "easy_ham/00050.74d3103c5691914a530dcae2f656a1f5",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0251,
+      "latencyMs": 331
+    },
+    {
+      "id": "easy_ham/00051.03dcdb0e4e6100cfcf0eddbf78fbae17",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 318
+    },
+    {
+      "id": "easy_ham/00051.03dcdb0e4e6100cfcf0eddbf78fbae17",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0117,
+      "latencyMs": 369
+    },
+    {
+      "id": "easy_ham/00051.03dcdb0e4e6100cfcf0eddbf78fbae17",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0241,
+      "latencyMs": 147
+    },
+    {
+      "id": "easy_ham/00052.c6c74aeef6d36423f57807ad4c901dc4",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 381
+    },
+    {
+      "id": "easy_ham/00052.c6c74aeef6d36423f57807ad4c901dc4",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0121,
+      "latencyMs": 318
+    },
+    {
+      "id": "easy_ham/00052.c6c74aeef6d36423f57807ad4c901dc4",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0217,
+      "latencyMs": 120
+    },
+    {
+      "id": "easy_ham/00053.707c625cb618aadafe3e54544fa3ca78",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 347
+    },
+    {
+      "id": "easy_ham/00053.707c625cb618aadafe3e54544fa3ca78",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0108,
+      "latencyMs": 154
+    },
+    {
+      "id": "easy_ham/00053.707c625cb618aadafe3e54544fa3ca78",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0256,
+      "latencyMs": 148
+    },
+    {
+      "id": "easy_ham/00054.f3e1dc8f3a7fdc5bec424db5e07e8ef8",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 3252
+    },
+    {
+      "id": "easy_ham/00054.f3e1dc8f3a7fdc5bec424db5e07e8ef8",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0128,
+      "latencyMs": 503
+    },
+    {
+      "id": "easy_ham/00054.f3e1dc8f3a7fdc5bec424db5e07e8ef8",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0232,
+      "latencyMs": 287
+    },
+    {
+      "id": "easy_ham/00055.8481bc92aa3ab9d23ca30c0eaecfc5e4",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 273
+    },
+    {
+      "id": "easy_ham/00055.8481bc92aa3ab9d23ca30c0eaecfc5e4",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0234,
+      "latencyMs": 420
+    },
+    {
+      "id": "easy_ham/00055.8481bc92aa3ab9d23ca30c0eaecfc5e4",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0226,
+      "latencyMs": 156
+    },
+    {
+      "id": "easy_ham/00056.b510d34bac037c4c377b1f51dbe5f0d3",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 297
+    },
+    {
+      "id": "easy_ham/00056.b510d34bac037c4c377b1f51dbe5f0d3",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0518,
+      "latencyMs": 348
+    },
+    {
+      "id": "easy_ham/00056.b510d34bac037c4c377b1f51dbe5f0d3",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0261,
+      "latencyMs": 173
+    },
+    {
+      "id": "easy_ham/00057.7c3a836baaa732cd915546442c0fef1a",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 343
+    },
+    {
+      "id": "easy_ham/00057.7c3a836baaa732cd915546442c0fef1a",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0149,
+      "latencyMs": 273
+    },
+    {
+      "id": "easy_ham/00057.7c3a836baaa732cd915546442c0fef1a",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0176,
+      "latencyMs": 168
+    },
+    {
+      "id": "easy_ham/00058.ecfc3a7f406355a82abe9d16d3d5733a",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 294
+    },
+    {
+      "id": "easy_ham/00058.ecfc3a7f406355a82abe9d16d3d5733a",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0129,
+      "latencyMs": 274
+    },
+    {
+      "id": "easy_ham/00058.ecfc3a7f406355a82abe9d16d3d5733a",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0212,
+      "latencyMs": 140
+    },
+    {
+      "id": "easy_ham/00059.34a8067a36762120b9292004a4d68558",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 278
+    },
+    {
+      "id": "easy_ham/00059.34a8067a36762120b9292004a4d68558",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0111,
+      "latencyMs": 449
+    },
+    {
+      "id": "easy_ham/00059.34a8067a36762120b9292004a4d68558",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0219,
+      "latencyMs": 183
+    },
+    {
+      "id": "easy_ham/00060.d51949a7342f8adc568483f6e799ee25",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 276
+    },
+    {
+      "id": "easy_ham/00060.d51949a7342f8adc568483f6e799ee25",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0125,
+      "latencyMs": 408
+    },
+    {
+      "id": "easy_ham/00060.d51949a7342f8adc568483f6e799ee25",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0214,
+      "latencyMs": 113
+    },
+    {
+      "id": "easy_ham/00061.9cc2b5c110807914cc6c38263b7dd62a",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 7924
+    },
+    {
+      "id": "easy_ham/00061.9cc2b5c110807914cc6c38263b7dd62a",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0127,
+      "latencyMs": 453
+    },
+    {
+      "id": "easy_ham/00061.9cc2b5c110807914cc6c38263b7dd62a",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0256,
+      "latencyMs": 214
+    },
+    {
+      "id": "easy_ham/00062.009f5a1a8fa88f0b38299ad01562bb37",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 246
+    },
+    {
+      "id": "easy_ham/00062.009f5a1a8fa88f0b38299ad01562bb37",
+      "spam": false,
+      "model": "clef",
+      "score": 0.4603,
+      "latencyMs": 189
+    },
+    {
+      "id": "easy_ham/00062.009f5a1a8fa88f0b38299ad01562bb37",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1938,
+      "latencyMs": 276
+    },
+    {
+      "id": "easy_ham/00063.0acbc484a73f0e0b727e06c100d8df7b",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 1509
+    },
+    {
+      "id": "easy_ham/00063.0acbc484a73f0e0b727e06c100d8df7b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.4613,
+      "latencyMs": 318
+    },
+    {
+      "id": "easy_ham/00063.0acbc484a73f0e0b727e06c100d8df7b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0507,
+      "latencyMs": 102
+    },
+    {
+      "id": "easy_ham/00064.cb4bd5482454f02b6c3d70343af090a8",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 316
+    },
+    {
+      "id": "easy_ham/00064.cb4bd5482454f02b6c3d70343af090a8",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0359,
+      "latencyMs": 296
+    },
+    {
+      "id": "easy_ham/00064.cb4bd5482454f02b6c3d70343af090a8",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0256,
+      "latencyMs": 141
+    },
+    {
+      "id": "easy_ham/00065.fa593405941ce1f32a29e813493eacf2",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 272
+    },
+    {
+      "id": "easy_ham/00065.fa593405941ce1f32a29e813493eacf2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0233,
+      "latencyMs": 585
+    },
+    {
+      "id": "easy_ham/00065.fa593405941ce1f32a29e813493eacf2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0217,
+      "latencyMs": 132
+    },
+    {
+      "id": "easy_ham/00066.7dda463deb5e41ba1af3a0da55ab504b",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 274
+    },
+    {
+      "id": "easy_ham/00066.7dda463deb5e41ba1af3a0da55ab504b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0133,
+      "latencyMs": 615
+    },
+    {
+      "id": "easy_ham/00066.7dda463deb5e41ba1af3a0da55ab504b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0215,
+      "latencyMs": 176
+    },
+    {
+      "id": "easy_ham/00067.23813c5ac6ce66fd892ee5501fd5dbd2",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 5105
+    },
+    {
+      "id": "easy_ham/00067.23813c5ac6ce66fd892ee5501fd5dbd2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.9312,
+      "latencyMs": 170
+    },
+    {
+      "id": "easy_ham/00067.23813c5ac6ce66fd892ee5501fd5dbd2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9378,
+      "latencyMs": 262
+    },
+    {
+      "id": "easy_ham/00068.5053f669dda8f920e5300ed327cdd986",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 466
+    },
+    {
+      "id": "easy_ham/00068.5053f669dda8f920e5300ed327cdd986",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0303,
+      "latencyMs": 612
+    },
+    {
+      "id": "easy_ham/00068.5053f669dda8f920e5300ed327cdd986",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0209,
+      "latencyMs": 96
+    },
+    {
+      "id": "easy_ham/00069.1477f740f56d3e0bd132ad70993edda5",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 153
+    },
+    {
+      "id": "easy_ham/00069.1477f740f56d3e0bd132ad70993edda5",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0124,
+      "latencyMs": 299
+    },
+    {
+      "id": "easy_ham/00069.1477f740f56d3e0bd132ad70993edda5",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0206,
+      "latencyMs": 143
+    },
+    {
+      "id": "easy_ham/00070.c62a036deb1de40aa32cabc761b0861c",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 344
+    },
+    {
+      "id": "easy_ham/00070.c62a036deb1de40aa32cabc761b0861c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0772,
+      "latencyMs": 303
+    },
+    {
+      "id": "easy_ham/00070.c62a036deb1de40aa32cabc761b0861c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0205,
+      "latencyMs": 97
+    },
+    {
+      "id": "easy_ham/00071.a1a5f4834bebcb59bb75698821cf9f9a",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 319
+    },
+    {
+      "id": "easy_ham/00071.a1a5f4834bebcb59bb75698821cf9f9a",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0277,
+      "latencyMs": 533
+    },
+    {
+      "id": "easy_ham/00071.a1a5f4834bebcb59bb75698821cf9f9a",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0357,
+      "latencyMs": 116
+    },
+    {
+      "id": "easy_ham/00072.8dcd09744b5534002262a8f3927ba3fc",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 397
+    },
+    {
+      "id": "easy_ham/00072.8dcd09744b5534002262a8f3927ba3fc",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0527,
+      "latencyMs": 380
+    },
+    {
+      "id": "easy_ham/00072.8dcd09744b5534002262a8f3927ba3fc",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.032,
+      "latencyMs": 231
+    },
+    {
+      "id": "easy_ham/00073.30ffa73f8021a40ac03218af092d0dc7",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 289
+    },
+    {
+      "id": "easy_ham/00073.30ffa73f8021a40ac03218af092d0dc7",
+      "spam": false,
+      "model": "clef",
+      "score": 0.045,
+      "latencyMs": 379
+    },
+    {
+      "id": "easy_ham/00073.30ffa73f8021a40ac03218af092d0dc7",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0312,
+      "latencyMs": 191
+    },
+    {
+      "id": "easy_ham/00074.71045f0bdb236b814e4729d318bd6509",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 436
+    },
+    {
+      "id": "easy_ham/00074.71045f0bdb236b814e4729d318bd6509",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0333,
+      "latencyMs": 333
+    },
+    {
+      "id": "easy_ham/00074.71045f0bdb236b814e4729d318bd6509",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0244,
+      "latencyMs": 123
+    },
+    {
+      "id": "easy_ham/00075.6485889c364c71761110c2b1190bb645",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 339
+    },
+    {
+      "id": "easy_ham/00075.6485889c364c71761110c2b1190bb645",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0592,
+      "latencyMs": 393
+    },
+    {
+      "id": "easy_ham/00075.6485889c364c71761110c2b1190bb645",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0213,
+      "latencyMs": 171
+    },
+    {
+      "id": "easy_ham/00076.5aa682e393bfbef53e244acf3b2d23d6",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 300
+    },
+    {
+      "id": "easy_ham/00076.5aa682e393bfbef53e244acf3b2d23d6",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0133,
+      "latencyMs": 439
+    },
+    {
+      "id": "easy_ham/00076.5aa682e393bfbef53e244acf3b2d23d6",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.019,
+      "latencyMs": 156
+    },
+    {
+      "id": "easy_ham/00077.24cfaba59d55d652be33b58bd7d41ca2",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 311
+    },
+    {
+      "id": "easy_ham/00077.24cfaba59d55d652be33b58bd7d41ca2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.2391,
+      "latencyMs": 206
+    },
+    {
+      "id": "easy_ham/00077.24cfaba59d55d652be33b58bd7d41ca2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.023,
+      "latencyMs": 155
+    },
+    {
+      "id": "easy_ham/00078.2ea8ca29bc2ed373a6c8270b488def60",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 293
+    },
+    {
+      "id": "easy_ham/00078.2ea8ca29bc2ed373a6c8270b488def60",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0218,
+      "latencyMs": 221
+    },
+    {
+      "id": "easy_ham/00078.2ea8ca29bc2ed373a6c8270b488def60",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0337,
+      "latencyMs": 117
+    },
+    {
+      "id": "easy_ham/00079.5fa6a133fe202da2627f52bdf31fc6e2",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 298
+    },
+    {
+      "id": "easy_ham/00079.5fa6a133fe202da2627f52bdf31fc6e2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0175,
+      "latencyMs": 284
+    },
+    {
+      "id": "easy_ham/00079.5fa6a133fe202da2627f52bdf31fc6e2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.023,
+      "latencyMs": 132
+    },
+    {
+      "id": "easy_ham/00080.ba42e846212f912a63aa36c7a9ded217",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 3532
+    },
+    {
+      "id": "easy_ham/00080.ba42e846212f912a63aa36c7a9ded217",
+      "spam": false,
+      "model": "clef",
+      "score": 0.3734,
+      "latencyMs": 376
+    },
+    {
+      "id": "easy_ham/00080.ba42e846212f912a63aa36c7a9ded217",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0186,
+      "latencyMs": 123
+    },
+    {
+      "id": "easy_ham/00081.c16e4d631ac7941fd25ffb1cd316e100",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 275
+    },
+    {
+      "id": "easy_ham/00081.c16e4d631ac7941fd25ffb1cd316e100",
+      "spam": false,
+      "model": "clef",
+      "score": 0.019,
+      "latencyMs": 358
+    },
+    {
+      "id": "easy_ham/00081.c16e4d631ac7941fd25ffb1cd316e100",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0209,
+      "latencyMs": 209
+    },
+    {
+      "id": "easy_ham/00082.b40e4eedafc60aef72a0a0cbb63c2406",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 260
+    },
+    {
+      "id": "easy_ham/00082.b40e4eedafc60aef72a0a0cbb63c2406",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0272,
+      "latencyMs": 319
+    },
+    {
+      "id": "easy_ham/00082.b40e4eedafc60aef72a0a0cbb63c2406",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0214,
+      "latencyMs": 114
+    },
+    {
+      "id": "easy_ham/00083.d6bec4788401bc0df20b740557680768",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 355
+    },
+    {
+      "id": "easy_ham/00083.d6bec4788401bc0df20b740557680768",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0272,
+      "latencyMs": 628
+    },
+    {
+      "id": "easy_ham/00083.d6bec4788401bc0df20b740557680768",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0219,
+      "latencyMs": 372
+    },
+    {
+      "id": "easy_ham/00084.2ef0c65e298880c3869b39dc95b40e8e",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 385
+    },
+    {
+      "id": "easy_ham/00084.2ef0c65e298880c3869b39dc95b40e8e",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0115,
+      "latencyMs": 449
+    },
+    {
+      "id": "easy_ham/00084.2ef0c65e298880c3869b39dc95b40e8e",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0274,
+      "latencyMs": 117
+    },
+    {
+      "id": "easy_ham/00085.badc533c7037554017afb30c94dfcb55",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 2689
+    },
+    {
+      "id": "easy_ham/00085.badc533c7037554017afb30c94dfcb55",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0162,
+      "latencyMs": 370
+    },
+    {
+      "id": "easy_ham/00085.badc533c7037554017afb30c94dfcb55",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0203,
+      "latencyMs": 186
+    },
+    {
+      "id": "easy_ham/00086.2d36c5f829135d1fed8f88471163b240",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 4149
+    },
+    {
+      "id": "easy_ham/00086.2d36c5f829135d1fed8f88471163b240",
+      "spam": false,
+      "model": "clef",
+      "score": 0.5358,
+      "latencyMs": 487
+    },
+    {
+      "id": "easy_ham/00086.2d36c5f829135d1fed8f88471163b240",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1067,
+      "latencyMs": 127
+    },
+    {
+      "id": "easy_ham/00087.03a92f5753c44cb83d28837121d82b06",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 277
+    },
+    {
+      "id": "easy_ham/00087.03a92f5753c44cb83d28837121d82b06",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0276,
+      "latencyMs": 269
+    },
+    {
+      "id": "easy_ham/00087.03a92f5753c44cb83d28837121d82b06",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0245,
+      "latencyMs": 117
+    },
+    {
+      "id": "easy_ham/00088.945614c3f6213f59548ab21306451675",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 283
+    },
+    {
+      "id": "easy_ham/00088.945614c3f6213f59548ab21306451675",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0115,
+      "latencyMs": 345
+    },
+    {
+      "id": "easy_ham/00088.945614c3f6213f59548ab21306451675",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0262,
+      "latencyMs": 206
+    },
+    {
+      "id": "easy_ham/00089.c31c9b44b66c440d6b39c5f8841ed43b",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 277
+    },
+    {
+      "id": "easy_ham/00089.c31c9b44b66c440d6b39c5f8841ed43b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0139,
+      "latencyMs": 416
+    },
+    {
+      "id": "easy_ham/00089.c31c9b44b66c440d6b39c5f8841ed43b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0229,
+      "latencyMs": 136
+    },
+    {
+      "id": "easy_ham/00090.3af9d04b3ade1077fce4fb224ebf38cb",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 271
+    },
+    {
+      "id": "easy_ham/00090.3af9d04b3ade1077fce4fb224ebf38cb",
+      "spam": false,
+      "model": "clef",
+      "score": 0.013,
+      "latencyMs": 188
+    },
+    {
+      "id": "easy_ham/00090.3af9d04b3ade1077fce4fb224ebf38cb",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0276,
+      "latencyMs": 128
+    },
+    {
+      "id": "easy_ham/00091.abb1965e279e4365f1ef31e4878c5d14",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 283
+    },
+    {
+      "id": "easy_ham/00091.abb1965e279e4365f1ef31e4878c5d14",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0119,
+      "latencyMs": 318
+    },
+    {
+      "id": "easy_ham/00091.abb1965e279e4365f1ef31e4878c5d14",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0233,
+      "latencyMs": 176
+    },
+    {
+      "id": "easy_ham/00092.7ecc7d565565fbe466bfc8db6e456f9d",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 365
+    },
+    {
+      "id": "easy_ham/00092.7ecc7d565565fbe466bfc8db6e456f9d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0125,
+      "latencyMs": 695
+    },
+    {
+      "id": "easy_ham/00092.7ecc7d565565fbe466bfc8db6e456f9d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.019,
+      "latencyMs": 110
+    },
+    {
+      "id": "easy_ham/00093.ee758841ef674e30d7d36f22fffeaeb6",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 290
+    },
+    {
+      "id": "easy_ham/00093.ee758841ef674e30d7d36f22fffeaeb6",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0116,
+      "latencyMs": 317
+    },
+    {
+      "id": "easy_ham/00093.ee758841ef674e30d7d36f22fffeaeb6",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0242,
+      "latencyMs": 124
+    },
+    {
+      "id": "easy_ham/00094.ef72156b3ba9ff0fc5fedc2125ceb736",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 513
+    },
+    {
+      "id": "easy_ham/00094.ef72156b3ba9ff0fc5fedc2125ceb736",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0136,
+      "latencyMs": 556
+    },
+    {
+      "id": "easy_ham/00094.ef72156b3ba9ff0fc5fedc2125ceb736",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0239,
+      "latencyMs": 142
+    },
+    {
+      "id": "easy_ham/00095.24caf7db5c45203f312f742f49385618",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 219
+    },
+    {
+      "id": "easy_ham/00095.24caf7db5c45203f312f742f49385618",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0119,
+      "latencyMs": 574
+    },
+    {
+      "id": "easy_ham/00095.24caf7db5c45203f312f742f49385618",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.027,
+      "latencyMs": 146
+    },
+    {
+      "id": "easy_ham/00096.3517ca839b03cdf37c14ff9b3667dd98",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 441
+    },
+    {
+      "id": "easy_ham/00096.3517ca839b03cdf37c14ff9b3667dd98",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0107,
+      "latencyMs": 579
+    },
+    {
+      "id": "easy_ham/00096.3517ca839b03cdf37c14ff9b3667dd98",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0272,
+      "latencyMs": 126
+    },
+    {
+      "id": "easy_ham/00097.e8e276c07ee885c4b8d904c1414412e5",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 280
+    },
+    {
+      "id": "easy_ham/00097.e8e276c07ee885c4b8d904c1414412e5",
+      "spam": false,
+      "model": "clef",
+      "score": 0.012,
+      "latencyMs": 233
+    },
+    {
+      "id": "easy_ham/00097.e8e276c07ee885c4b8d904c1414412e5",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0253,
+      "latencyMs": 123
+    },
+    {
+      "id": "easy_ham/00098.90c05d1ad65ea3fa796bfa2808f71052",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 207
+    },
+    {
+      "id": "easy_ham/00098.90c05d1ad65ea3fa796bfa2808f71052",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0156,
+      "latencyMs": 356
+    },
+    {
+      "id": "easy_ham/00098.90c05d1ad65ea3fa796bfa2808f71052",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0201,
+      "latencyMs": 110
+    },
+    {
+      "id": "easy_ham/00099.beef92f5eeeed3e40c1facf42809d510",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 260
+    },
+    {
+      "id": "easy_ham/00099.beef92f5eeeed3e40c1facf42809d510",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0115,
+      "latencyMs": 667
+    },
+    {
+      "id": "easy_ham/00099.beef92f5eeeed3e40c1facf42809d510",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0225,
+      "latencyMs": 119
+    },
+    {
+      "id": "easy_ham/00100.f070e3aaa7f475f95589b1900ff58d26",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 307
+    },
+    {
+      "id": "easy_ham/00100.f070e3aaa7f475f95589b1900ff58d26",
+      "spam": false,
+      "model": "clef",
+      "score": 0.015,
+      "latencyMs": 185
+    },
+    {
+      "id": "easy_ham/00100.f070e3aaa7f475f95589b1900ff58d26",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.021,
+      "latencyMs": 123
+    },
+    {
+      "id": "hard_ham/00001.7c7d6921e671bbe18ebb5f893cd9bb35",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 238
+    },
+    {
+      "id": "hard_ham/00001.7c7d6921e671bbe18ebb5f893cd9bb35",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0607,
+      "latencyMs": 332
+    },
+    {
+      "id": "hard_ham/00001.7c7d6921e671bbe18ebb5f893cd9bb35",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0473,
+      "latencyMs": 239
+    },
+    {
+      "id": "hard_ham/00002.ca96f74042d05c1a1d29ca30467cfcd5",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1599
+    },
+    {
+      "id": "hard_ham/00002.ca96f74042d05c1a1d29ca30467cfcd5",
+      "spam": false,
+      "model": "clef",
+      "score": 0.9655,
+      "latencyMs": 387
+    },
+    {
+      "id": "hard_ham/00002.ca96f74042d05c1a1d29ca30467cfcd5",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.8504,
+      "latencyMs": 124
+    },
+    {
+      "id": "hard_ham/00003.268fd170a3fc73bee2739d8204856a53",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 289
+    },
+    {
+      "id": "hard_ham/00003.268fd170a3fc73bee2739d8204856a53",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0606,
+      "latencyMs": 581
+    },
+    {
+      "id": "hard_ham/00003.268fd170a3fc73bee2739d8204856a53",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.069,
+      "latencyMs": 221
+    },
+    {
+      "id": "hard_ham/00004.68819fc91d34c82433074d7bd3127dcc",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 243
+    },
+    {
+      "id": "hard_ham/00004.68819fc91d34c82433074d7bd3127dcc",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0229,
+      "latencyMs": 251
+    },
+    {
+      "id": "hard_ham/00004.68819fc91d34c82433074d7bd3127dcc",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0236,
+      "latencyMs": 114
+    },
+    {
+      "id": "hard_ham/00005.34bcaad58ad5f598f5d6af8cfa0c0465",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 290
+    },
+    {
+      "id": "hard_ham/00005.34bcaad58ad5f598f5d6af8cfa0c0465",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0409,
+      "latencyMs": 410
+    },
+    {
+      "id": "hard_ham/00005.34bcaad58ad5f598f5d6af8cfa0c0465",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0666,
+      "latencyMs": 177
+    },
+    {
+      "id": "hard_ham/00006.3409dec8ca4fcf2d6e0582554473b5c9",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 319
+    },
+    {
+      "id": "hard_ham/00006.3409dec8ca4fcf2d6e0582554473b5c9",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1466,
+      "latencyMs": 593
+    },
+    {
+      "id": "hard_ham/00006.3409dec8ca4fcf2d6e0582554473b5c9",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.2551,
+      "latencyMs": 123
+    },
+    {
+      "id": "hard_ham/00007.d24e99a602ee7fb442714c0d448cd08e",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1019
+    },
+    {
+      "id": "hard_ham/00007.d24e99a602ee7fb442714c0d448cd08e",
+      "spam": false,
+      "model": "clef",
+      "score": 0.9446,
+      "latencyMs": 449
+    },
+    {
+      "id": "hard_ham/00007.d24e99a602ee7fb442714c0d448cd08e",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9063,
+      "latencyMs": 132
+    },
+    {
+      "id": "hard_ham/00008.b42457819236bee543bebffb61b91e44",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 283
+    },
+    {
+      "id": "hard_ham/00008.b42457819236bee543bebffb61b91e44",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0579,
+      "latencyMs": 534
+    },
+    {
+      "id": "hard_ham/00008.b42457819236bee543bebffb61b91e44",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0249,
+      "latencyMs": 176
+    },
+    {
+      "id": "hard_ham/00009.ddea79a02a9978cb3dafef3c05ff37a6",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 281
+    },
+    {
+      "id": "hard_ham/00009.ddea79a02a9978cb3dafef3c05ff37a6",
+      "spam": false,
+      "model": "clef",
+      "score": 0.9245,
+      "latencyMs": 484
+    },
+    {
+      "id": "hard_ham/00009.ddea79a02a9978cb3dafef3c05ff37a6",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9493,
+      "latencyMs": 115
+    },
+    {
+      "id": "hard_ham/00010.e82bd1f5f7eae426682a7f8e4cbf1ae6",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 337
+    },
+    {
+      "id": "hard_ham/00010.e82bd1f5f7eae426682a7f8e4cbf1ae6",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0478,
+      "latencyMs": 149
+    },
+    {
+      "id": "hard_ham/00010.e82bd1f5f7eae426682a7f8e4cbf1ae6",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0282,
+      "latencyMs": 138
+    },
+    {
+      "id": "hard_ham/00011.acdfa5be40e7b6c3ad3df28c63670c7c",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 301
+    },
+    {
+      "id": "hard_ham/00011.acdfa5be40e7b6c3ad3df28c63670c7c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0911,
+      "latencyMs": 320
+    },
+    {
+      "id": "hard_ham/00011.acdfa5be40e7b6c3ad3df28c63670c7c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0809,
+      "latencyMs": 113
+    },
+    {
+      "id": "hard_ham/00012.58a866f18474d94989984958e1789df4",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 283
+    },
+    {
+      "id": "hard_ham/00012.58a866f18474d94989984958e1789df4",
+      "spam": false,
+      "model": "clef",
+      "score": 0.5028,
+      "latencyMs": 583
+    },
+    {
+      "id": "hard_ham/00012.58a866f18474d94989984958e1789df4",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.468,
+      "latencyMs": 122
+    },
+    {
+      "id": "hard_ham/00013.15135df1ed8198dbea3fcd0cb8d071ae",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 109
+    },
+    {
+      "id": "hard_ham/00013.15135df1ed8198dbea3fcd0cb8d071ae",
+      "spam": false,
+      "model": "clef",
+      "score": 0.2299,
+      "latencyMs": 505
+    },
+    {
+      "id": "hard_ham/00013.15135df1ed8198dbea3fcd0cb8d071ae",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.2839,
+      "latencyMs": 104
+    },
+    {
+      "id": "hard_ham/00014.a1f7ca2723b9e4060e7c73b6e1fed642",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 220
+    },
+    {
+      "id": "hard_ham/00014.a1f7ca2723b9e4060e7c73b6e1fed642",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0217,
+      "latencyMs": 170
+    },
+    {
+      "id": "hard_ham/00014.a1f7ca2723b9e4060e7c73b6e1fed642",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0362,
+      "latencyMs": 174
+    },
+    {
+      "id": "hard_ham/00015.ada83ed8f5e09b7dd5b268dafb0d7e8d",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 298
+    },
+    {
+      "id": "hard_ham/00015.ada83ed8f5e09b7dd5b268dafb0d7e8d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0317,
+      "latencyMs": 515
+    },
+    {
+      "id": "hard_ham/00015.ada83ed8f5e09b7dd5b268dafb0d7e8d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0335,
+      "latencyMs": 100
+    },
+    {
+      "id": "hard_ham/00016.47e87c7e7f6c78738ad4fb654dbdaaac",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 409
+    },
+    {
+      "id": "hard_ham/00016.47e87c7e7f6c78738ad4fb654dbdaaac",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0549,
+      "latencyMs": 199
+    },
+    {
+      "id": "hard_ham/00016.47e87c7e7f6c78738ad4fb654dbdaaac",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0597,
+      "latencyMs": 133
+    },
+    {
+      "id": "hard_ham/00017.840244edb8cc88aba7129296ea536212",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 300
+    },
+    {
+      "id": "hard_ham/00017.840244edb8cc88aba7129296ea536212",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0323,
+      "latencyMs": 185
+    },
+    {
+      "id": "hard_ham/00017.840244edb8cc88aba7129296ea536212",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0313,
+      "latencyMs": 129
+    },
+    {
+      "id": "hard_ham/00018.75bf8472753f24aa22df72c7301e07ec",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 210
+    },
+    {
+      "id": "hard_ham/00018.75bf8472753f24aa22df72c7301e07ec",
+      "spam": false,
+      "model": "clef",
+      "score": 0.8498,
+      "latencyMs": 200
+    },
+    {
+      "id": "hard_ham/00018.75bf8472753f24aa22df72c7301e07ec",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.73,
+      "latencyMs": 110
+    },
+    {
+      "id": "hard_ham/00019.e35a7a6a1a6bdd0d2e164db2f6a0e4ef",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 285
+    },
+    {
+      "id": "hard_ham/00019.e35a7a6a1a6bdd0d2e164db2f6a0e4ef",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1086,
+      "latencyMs": 341
+    },
+    {
+      "id": "hard_ham/00019.e35a7a6a1a6bdd0d2e164db2f6a0e4ef",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0323,
+      "latencyMs": 177
+    },
+    {
+      "id": "hard_ham/00020.eca3ca2c144cd6ceaf677f3d8b7b0eed",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 284
+    },
+    {
+      "id": "hard_ham/00020.eca3ca2c144cd6ceaf677f3d8b7b0eed",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0712,
+      "latencyMs": 173
+    },
+    {
+      "id": "hard_ham/00020.eca3ca2c144cd6ceaf677f3d8b7b0eed",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.163,
+      "latencyMs": 137
+    },
+    {
+      "id": "hard_ham/00021.1707ccb203e1a39f5167f1c0d65cc235",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 285
+    },
+    {
+      "id": "hard_ham/00021.1707ccb203e1a39f5167f1c0d65cc235",
+      "spam": false,
+      "model": "clef",
+      "score": 0.209,
+      "latencyMs": 258
+    },
+    {
+      "id": "hard_ham/00021.1707ccb203e1a39f5167f1c0d65cc235",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0788,
+      "latencyMs": 154
+    },
+    {
+      "id": "hard_ham/00022.66e4bce429ab25c5d2c7e8a1a38838a0",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 291
+    },
+    {
+      "id": "hard_ham/00022.66e4bce429ab25c5d2c7e8a1a38838a0",
+      "spam": false,
+      "model": "clef",
+      "score": 0.6315,
+      "latencyMs": 677
+    },
+    {
+      "id": "hard_ham/00022.66e4bce429ab25c5d2c7e8a1a38838a0",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.8936,
+      "latencyMs": 117
+    },
+    {
+      "id": "hard_ham/00023.fdefc991ac9ee6ab05fe5035b74cef1d",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 291
+    },
+    {
+      "id": "hard_ham/00023.fdefc991ac9ee6ab05fe5035b74cef1d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0255,
+      "latencyMs": 405
+    },
+    {
+      "id": "hard_ham/00023.fdefc991ac9ee6ab05fe5035b74cef1d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0295,
+      "latencyMs": 170
+    },
+    {
+      "id": "hard_ham/00024.9d2b87b00039e2527adfebd188dd3e98",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 283
+    },
+    {
+      "id": "hard_ham/00024.9d2b87b00039e2527adfebd188dd3e98",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1448,
+      "latencyMs": 413
+    },
+    {
+      "id": "hard_ham/00024.9d2b87b00039e2527adfebd188dd3e98",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.041,
+      "latencyMs": 333
+    },
+    {
+      "id": "hard_ham/00025.c27f4dd57c84c01305bd30bdee96810b",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 296
+    },
+    {
+      "id": "hard_ham/00025.c27f4dd57c84c01305bd30bdee96810b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.6238,
+      "latencyMs": 2947
+    },
+    {
+      "id": "hard_ham/00025.c27f4dd57c84c01305bd30bdee96810b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.3095,
+      "latencyMs": 118
+    },
+    {
+      "id": "hard_ham/00026.bb0f14a06b51317f3fc7854cdaae5cdb",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 332
+    },
+    {
+      "id": "hard_ham/00026.bb0f14a06b51317f3fc7854cdaae5cdb",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1272,
+      "latencyMs": 386
+    },
+    {
+      "id": "hard_ham/00026.bb0f14a06b51317f3fc7854cdaae5cdb",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0785,
+      "latencyMs": 488
+    },
+    {
+      "id": "hard_ham/00027.87ab6708d16f330c0cb84c42a2adf154",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 392
+    },
+    {
+      "id": "hard_ham/00027.87ab6708d16f330c0cb84c42a2adf154",
+      "spam": false,
+      "model": "clef",
+      "score": 0.5566,
+      "latencyMs": 163
+    },
+    {
+      "id": "hard_ham/00027.87ab6708d16f330c0cb84c42a2adf154",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.844,
+      "latencyMs": 117
+    },
+    {
+      "id": "hard_ham/00028.13ae4e6472d6f2ded79066b8a7472a27",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 411
+    },
+    {
+      "id": "hard_ham/00028.13ae4e6472d6f2ded79066b8a7472a27",
+      "spam": false,
+      "model": "clef",
+      "score": 0.2789,
+      "latencyMs": 291
+    },
+    {
+      "id": "hard_ham/00028.13ae4e6472d6f2ded79066b8a7472a27",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0459,
+      "latencyMs": 105
+    },
+    {
+      "id": "hard_ham/00029.844ef4d2066aab3fdf93692142d5911f",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 7795
+    },
+    {
+      "id": "hard_ham/00029.844ef4d2066aab3fdf93692142d5911f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.89,
+      "latencyMs": 339
+    },
+    {
+      "id": "hard_ham/00029.844ef4d2066aab3fdf93692142d5911f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.25,
+      "latencyMs": 114
+    },
+    {
+      "id": "hard_ham/00030.81e02cde7ddb4986b99b38a31ef8cf9a",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 213
+    },
+    {
+      "id": "hard_ham/00030.81e02cde7ddb4986b99b38a31ef8cf9a",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1805,
+      "latencyMs": 290
+    },
+    {
+      "id": "hard_ham/00030.81e02cde7ddb4986b99b38a31ef8cf9a",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.2403,
+      "latencyMs": 102
+    },
+    {
+      "id": "hard_ham/00031.2ca10bdfae710ae978fe69ac84d9e98c",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 319
+    },
+    {
+      "id": "hard_ham/00031.2ca10bdfae710ae978fe69ac84d9e98c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0221,
+      "latencyMs": 564
+    },
+    {
+      "id": "hard_ham/00031.2ca10bdfae710ae978fe69ac84d9e98c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0355,
+      "latencyMs": 106
+    },
+    {
+      "id": "hard_ham/00032.f84b348f70e22edf30de5cc219e50e36",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 7648
+    },
+    {
+      "id": "hard_ham/00032.f84b348f70e22edf30de5cc219e50e36",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0264,
+      "latencyMs": 509
+    },
+    {
+      "id": "hard_ham/00032.f84b348f70e22edf30de5cc219e50e36",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1433,
+      "latencyMs": 97
+    },
+    {
+      "id": "hard_ham/00033.a09f363a94e0c632227ab453b9fd4908",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 130
+    },
+    {
+      "id": "hard_ham/00033.a09f363a94e0c632227ab453b9fd4908",
+      "spam": false,
+      "model": "clef",
+      "score": 0.3701,
+      "latencyMs": 306
+    },
+    {
+      "id": "hard_ham/00033.a09f363a94e0c632227ab453b9fd4908",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.5357,
+      "latencyMs": 111
+    },
+    {
+      "id": "hard_ham/00034.a3365d4376445f183171dad145d0b82d",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1510
+    },
+    {
+      "id": "hard_ham/00034.a3365d4376445f183171dad145d0b82d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.113,
+      "latencyMs": 394
+    },
+    {
+      "id": "hard_ham/00034.a3365d4376445f183171dad145d0b82d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0533,
+      "latencyMs": 168
+    },
+    {
+      "id": "hard_ham/00035.a0e0e8cdca0b8352a9e9c2c81e5d5cd7",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 438
+    },
+    {
+      "id": "hard_ham/00035.a0e0e8cdca0b8352a9e9c2c81e5d5cd7",
+      "spam": false,
+      "model": "clef",
+      "score": 0.8814,
+      "latencyMs": 215
+    },
+    {
+      "id": "hard_ham/00035.a0e0e8cdca0b8352a9e9c2c81e5d5cd7",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9188,
+      "latencyMs": 224
+    },
+    {
+      "id": "hard_ham/00036.b2641f0e9ff64695cf368088640bee0c",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 289
+    },
+    {
+      "id": "hard_ham/00036.b2641f0e9ff64695cf368088640bee0c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0935,
+      "latencyMs": 168
+    },
+    {
+      "id": "hard_ham/00036.b2641f0e9ff64695cf368088640bee0c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0609,
+      "latencyMs": 131
+    },
+    {
+      "id": "hard_ham/00037.55830ddeb2e48be48787c1fb1656ee47",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 303
+    },
+    {
+      "id": "hard_ham/00037.55830ddeb2e48be48787c1fb1656ee47",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0272,
+      "latencyMs": 383
+    },
+    {
+      "id": "hard_ham/00037.55830ddeb2e48be48787c1fb1656ee47",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0332,
+      "latencyMs": 123
+    },
+    {
+      "id": "hard_ham/00038.a5f3ff0736ac35b3102c6712ffed9a60",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 335
+    },
+    {
+      "id": "hard_ham/00038.a5f3ff0736ac35b3102c6712ffed9a60",
+      "spam": false,
+      "model": "clef",
+      "score": 0.4976,
+      "latencyMs": 414
+    },
+    {
+      "id": "hard_ham/00038.a5f3ff0736ac35b3102c6712ffed9a60",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.3468,
+      "latencyMs": 125
+    },
+    {
+      "id": "hard_ham/00039.b2b936a8501444b213f61f9ff193b480",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 271
+    },
+    {
+      "id": "hard_ham/00039.b2b936a8501444b213f61f9ff193b480",
+      "spam": false,
+      "model": "clef",
+      "score": 0.7039,
+      "latencyMs": 466
+    },
+    {
+      "id": "hard_ham/00039.b2b936a8501444b213f61f9ff193b480",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0501,
+      "latencyMs": 115
+    },
+    {
+      "id": "hard_ham/00040.78ac9f85875ccded71e3bbb55a7e6ac1",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 265
+    },
+    {
+      "id": "hard_ham/00040.78ac9f85875ccded71e3bbb55a7e6ac1",
+      "spam": false,
+      "model": "clef",
+      "score": 0.6159,
+      "latencyMs": 204
+    },
+    {
+      "id": "hard_ham/00040.78ac9f85875ccded71e3bbb55a7e6ac1",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0606,
+      "latencyMs": 173
+    },
+    {
+      "id": "hard_ham/00041.aee0699a14f472a43d9a9d178aa21d70",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 266
+    },
+    {
+      "id": "hard_ham/00041.aee0699a14f472a43d9a9d178aa21d70",
+      "spam": false,
+      "model": "clef",
+      "score": 0.7388,
+      "latencyMs": 352
+    },
+    {
+      "id": "hard_ham/00041.aee0699a14f472a43d9a9d178aa21d70",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.3182,
+      "latencyMs": 121
+    },
+    {
+      "id": "hard_ham/00042.5b7f2a0e87c853e8c8e13d556c1320d2",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 297
+    },
+    {
+      "id": "hard_ham/00042.5b7f2a0e87c853e8c8e13d556c1320d2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0142,
+      "latencyMs": 459
+    },
+    {
+      "id": "hard_ham/00042.5b7f2a0e87c853e8c8e13d556c1320d2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0302,
+      "latencyMs": 99
+    },
+    {
+      "id": "hard_ham/00043.d8d12ae6c64ff65812f48641822d4892",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 851
+    },
+    {
+      "id": "hard_ham/00043.d8d12ae6c64ff65812f48641822d4892",
+      "spam": false,
+      "model": "clef",
+      "score": 0.7134,
+      "latencyMs": 218
+    },
+    {
+      "id": "hard_ham/00043.d8d12ae6c64ff65812f48641822d4892",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.3244,
+      "latencyMs": 184
+    },
+    {
+      "id": "hard_ham/00044.b2f03a4d512deb2c4702a3bd60a4fd88",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 450
+    },
+    {
+      "id": "hard_ham/00044.b2f03a4d512deb2c4702a3bd60a4fd88",
+      "spam": false,
+      "model": "clef",
+      "score": 0.8776,
+      "latencyMs": 330
+    },
+    {
+      "id": "hard_ham/00044.b2f03a4d512deb2c4702a3bd60a4fd88",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.8384,
+      "latencyMs": 113
+    },
+    {
+      "id": "hard_ham/00045.f1d1f852b14ac9cc7b8af57fed17e1dc",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 291
+    },
+    {
+      "id": "hard_ham/00045.f1d1f852b14ac9cc7b8af57fed17e1dc",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1117,
+      "latencyMs": 340
+    },
+    {
+      "id": "hard_ham/00045.f1d1f852b14ac9cc7b8af57fed17e1dc",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0515,
+      "latencyMs": 104
+    },
+    {
+      "id": "hard_ham/00046.026e41e68016ebba835a855d4e2af80f",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 432
+    },
+    {
+      "id": "hard_ham/00046.026e41e68016ebba835a855d4e2af80f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0988,
+      "latencyMs": 330
+    },
+    {
+      "id": "hard_ham/00046.026e41e68016ebba835a855d4e2af80f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0589,
+      "latencyMs": 187
+    },
+    {
+      "id": "hard_ham/00047.e16f5f2d37964469a4bea8d6028b2acc",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 1559
+    },
+    {
+      "id": "hard_ham/00047.e16f5f2d37964469a4bea8d6028b2acc",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0332,
+      "latencyMs": 380
+    },
+    {
+      "id": "hard_ham/00047.e16f5f2d37964469a4bea8d6028b2acc",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0338,
+      "latencyMs": 123
+    },
+    {
+      "id": "hard_ham/00048.edce23084d9ebd5cd49924ba4bd2c344",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 253
+    },
+    {
+      "id": "hard_ham/00048.edce23084d9ebd5cd49924ba4bd2c344",
+      "spam": false,
+      "model": "clef",
+      "score": 0.5165,
+      "latencyMs": 548
+    },
+    {
+      "id": "hard_ham/00048.edce23084d9ebd5cd49924ba4bd2c344",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.7529,
+      "latencyMs": 118
+    },
+    {
+      "id": "hard_ham/00049.7ed9039cd4c9cb59c4be39fdeaca0c64",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 284
+    },
+    {
+      "id": "hard_ham/00049.7ed9039cd4c9cb59c4be39fdeaca0c64",
+      "spam": false,
+      "model": "clef",
+      "score": 0.9049,
+      "latencyMs": 254
+    },
+    {
+      "id": "hard_ham/00049.7ed9039cd4c9cb59c4be39fdeaca0c64",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.2107,
+      "latencyMs": 125
+    },
+    {
+      "id": "hard_ham/00050.22f61c80e6b78b95140773a3ef3848eb",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1011
+    },
+    {
+      "id": "hard_ham/00050.22f61c80e6b78b95140773a3ef3848eb",
+      "spam": false,
+      "model": "clef",
+      "score": 0.581,
+      "latencyMs": 433
+    },
+    {
+      "id": "hard_ham/00050.22f61c80e6b78b95140773a3ef3848eb",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0604,
+      "latencyMs": 174
+    },
+    {
+      "id": "hard_ham/00051.2dbf15ab121393e6ea3e30a8a12fa23b",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 378
+    },
+    {
+      "id": "hard_ham/00051.2dbf15ab121393e6ea3e30a8a12fa23b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0466,
+      "latencyMs": 305
+    },
+    {
+      "id": "hard_ham/00051.2dbf15ab121393e6ea3e30a8a12fa23b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0342,
+      "latencyMs": 130
+    },
+    {
+      "id": "hard_ham/00052.706355b468fdd6ec4a291c1cef07436f",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 344
+    },
+    {
+      "id": "hard_ham/00052.706355b468fdd6ec4a291c1cef07436f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0213,
+      "latencyMs": 390
+    },
+    {
+      "id": "hard_ham/00052.706355b468fdd6ec4a291c1cef07436f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0349,
+      "latencyMs": 119
+    },
+    {
+      "id": "hard_ham/00053.64ab5b8544333b7c16af8c87b5ebe800",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 374
+    },
+    {
+      "id": "hard_ham/00053.64ab5b8544333b7c16af8c87b5ebe800",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1082,
+      "latencyMs": 285
+    },
+    {
+      "id": "hard_ham/00053.64ab5b8544333b7c16af8c87b5ebe800",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1749,
+      "latencyMs": 135
+    },
+    {
+      "id": "hard_ham/00054.7e71da5e65cb85d5c483c3de59a5d63b",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 325
+    },
+    {
+      "id": "hard_ham/00054.7e71da5e65cb85d5c483c3de59a5d63b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.7049,
+      "latencyMs": 166
+    },
+    {
+      "id": "hard_ham/00054.7e71da5e65cb85d5c483c3de59a5d63b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.2886,
+      "latencyMs": 132
+    },
+    {
+      "id": "hard_ham/00055.d4984b38068ffd0b982eb1e5c117512f",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 396
+    },
+    {
+      "id": "hard_ham/00055.d4984b38068ffd0b982eb1e5c117512f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0317,
+      "latencyMs": 231
+    },
+    {
+      "id": "hard_ham/00055.d4984b38068ffd0b982eb1e5c117512f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0307,
+      "latencyMs": 363
+    },
+    {
+      "id": "hard_ham/00056.c17c95457d7524edd8a72b6de455c4d2",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 802
+    },
+    {
+      "id": "hard_ham/00056.c17c95457d7524edd8a72b6de455c4d2",
+      "spam": false,
+      "model": "clef",
+      "score": 0.6373,
+      "latencyMs": 224
+    },
+    {
+      "id": "hard_ham/00056.c17c95457d7524edd8a72b6de455c4d2",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.516,
+      "latencyMs": 135
+    },
+    {
+      "id": "hard_ham/00057.ccb4ce3e080b3a2957b7b257d85b850c",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 333
+    },
+    {
+      "id": "hard_ham/00057.ccb4ce3e080b3a2957b7b257d85b850c",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0269,
+      "latencyMs": 678
+    },
+    {
+      "id": "hard_ham/00057.ccb4ce3e080b3a2957b7b257d85b850c",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0265,
+      "latencyMs": 216
+    },
+    {
+      "id": "hard_ham/00058.1af25be2ce8df45186febc96c29c6109",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 300
+    },
+    {
+      "id": "hard_ham/00058.1af25be2ce8df45186febc96c29c6109",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1106,
+      "latencyMs": 228
+    },
+    {
+      "id": "hard_ham/00058.1af25be2ce8df45186febc96c29c6109",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0594,
+      "latencyMs": 123
+    },
+    {
+      "id": "hard_ham/00059.ad3ed6777e73773ebd7ee5455e6a43e3",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 302
+    },
+    {
+      "id": "hard_ham/00059.ad3ed6777e73773ebd7ee5455e6a43e3",
+      "spam": false,
+      "model": "clef",
+      "score": 0.3269,
+      "latencyMs": 276
+    },
+    {
+      "id": "hard_ham/00059.ad3ed6777e73773ebd7ee5455e6a43e3",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1357,
+      "latencyMs": 132
+    },
+    {
+      "id": "hard_ham/00060.bb5f0a4bb14bf8126f7024c538c22c92",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 353
+    },
+    {
+      "id": "hard_ham/00060.bb5f0a4bb14bf8126f7024c538c22c92",
+      "spam": false,
+      "model": "clef",
+      "score": 0.5066,
+      "latencyMs": 174
+    },
+    {
+      "id": "hard_ham/00060.bb5f0a4bb14bf8126f7024c538c22c92",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.2521,
+      "latencyMs": 127
+    },
+    {
+      "id": "hard_ham/00061.ced4949974bf2c9bb387310f53172c9b",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 399
+    },
+    {
+      "id": "hard_ham/00061.ced4949974bf2c9bb387310f53172c9b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.4416,
+      "latencyMs": 403
+    },
+    {
+      "id": "hard_ham/00061.ced4949974bf2c9bb387310f53172c9b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.2051,
+      "latencyMs": 126
+    },
+    {
+      "id": "hard_ham/00062.5eb057b09783a140a81fd95ed583f60d",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 210
+    },
+    {
+      "id": "hard_ham/00062.5eb057b09783a140a81fd95ed583f60d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0915,
+      "latencyMs": 299
+    },
+    {
+      "id": "hard_ham/00062.5eb057b09783a140a81fd95ed583f60d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0725,
+      "latencyMs": 135
+    },
+    {
+      "id": "hard_ham/00063.70680acb99a7bb45b2194c228388ed43",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 243
+    },
+    {
+      "id": "hard_ham/00063.70680acb99a7bb45b2194c228388ed43",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0298,
+      "latencyMs": 344
+    },
+    {
+      "id": "hard_ham/00063.70680acb99a7bb45b2194c228388ed43",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0335,
+      "latencyMs": 161
+    },
+    {
+      "id": "hard_ham/00064.a80b45bb0339ed948bbbd968c074c60e",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 402
+    },
+    {
+      "id": "hard_ham/00064.a80b45bb0339ed948bbbd968c074c60e",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0372,
+      "latencyMs": 567
+    },
+    {
+      "id": "hard_ham/00064.a80b45bb0339ed948bbbd968c074c60e",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0379,
+      "latencyMs": 280
+    },
+    {
+      "id": "hard_ham/00065.84b8fba96e680358bbd2c961fe356982",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 372
+    },
+    {
+      "id": "hard_ham/00065.84b8fba96e680358bbd2c961fe356982",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0211,
+      "latencyMs": 205
+    },
+    {
+      "id": "hard_ham/00065.84b8fba96e680358bbd2c961fe356982",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0322,
+      "latencyMs": 147
+    },
+    {
+      "id": "hard_ham/00066.a1470588fa7acf8f1ceb4b58f067682f",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 343
+    },
+    {
+      "id": "hard_ham/00066.a1470588fa7acf8f1ceb4b58f067682f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0209,
+      "latencyMs": 429
+    },
+    {
+      "id": "hard_ham/00066.a1470588fa7acf8f1ceb4b58f067682f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0349,
+      "latencyMs": 311
+    },
+    {
+      "id": "hard_ham/00067.78f9a9d537907424c503f4d29a2c24b4",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 252
+    },
+    {
+      "id": "hard_ham/00067.78f9a9d537907424c503f4d29a2c24b4",
+      "spam": false,
+      "model": "clef",
+      "score": 0.6393,
+      "latencyMs": 337
+    },
+    {
+      "id": "hard_ham/00067.78f9a9d537907424c503f4d29a2c24b4",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9421,
+      "latencyMs": 115
+    },
+    {
+      "id": "hard_ham/00068.9fad29898f9de2de79401e3112c4f4f6",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 268
+    },
+    {
+      "id": "hard_ham/00068.9fad29898f9de2de79401e3112c4f4f6",
+      "spam": false,
+      "model": "clef",
+      "score": 0.5211,
+      "latencyMs": 227
+    },
+    {
+      "id": "hard_ham/00068.9fad29898f9de2de79401e3112c4f4f6",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9185,
+      "latencyMs": 143
+    },
+    {
+      "id": "hard_ham/00069.fde06e5843b931e8deedd526033cf45a",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 290
+    },
+    {
+      "id": "hard_ham/00069.fde06e5843b931e8deedd526033cf45a",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0308,
+      "latencyMs": 222
+    },
+    {
+      "id": "hard_ham/00069.fde06e5843b931e8deedd526033cf45a",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0386,
+      "latencyMs": 114
+    },
+    {
+      "id": "hard_ham/00070.a6fc1e36f88c0bd0e0749274082938fc",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 298
+    },
+    {
+      "id": "hard_ham/00070.a6fc1e36f88c0bd0e0749274082938fc",
+      "spam": false,
+      "model": "clef",
+      "score": 0.366,
+      "latencyMs": 439
+    },
+    {
+      "id": "hard_ham/00070.a6fc1e36f88c0bd0e0749274082938fc",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.343,
+      "latencyMs": 104
+    },
+    {
+      "id": "hard_ham/00071.c101f559f8fb74cad5caf665a3713c34",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 207
+    },
+    {
+      "id": "hard_ham/00071.c101f559f8fb74cad5caf665a3713c34",
+      "spam": false,
+      "model": "clef",
+      "score": 0.3386,
+      "latencyMs": 193
+    },
+    {
+      "id": "hard_ham/00071.c101f559f8fb74cad5caf665a3713c34",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.6129,
+      "latencyMs": 120
+    },
+    {
+      "id": "hard_ham/00072.7fdfa76485745886daefc536dc734132",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 384
+    },
+    {
+      "id": "hard_ham/00072.7fdfa76485745886daefc536dc734132",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0489,
+      "latencyMs": 325
+    },
+    {
+      "id": "hard_ham/00072.7fdfa76485745886daefc536dc734132",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0322,
+      "latencyMs": 128
+    },
+    {
+      "id": "hard_ham/00073.4bd106f62a13d9071a638228a7189862",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 264
+    },
+    {
+      "id": "hard_ham/00073.4bd106f62a13d9071a638228a7189862",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1774,
+      "latencyMs": 199
+    },
+    {
+      "id": "hard_ham/00073.4bd106f62a13d9071a638228a7189862",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1276,
+      "latencyMs": 110
+    },
+    {
+      "id": "hard_ham/00074.c6f6a8cef7af2b318f769fc4633aa68d",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 303
+    },
+    {
+      "id": "hard_ham/00074.c6f6a8cef7af2b318f769fc4633aa68d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.6713,
+      "latencyMs": 424
+    },
+    {
+      "id": "hard_ham/00074.c6f6a8cef7af2b318f769fc4633aa68d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.6328,
+      "latencyMs": 119
+    },
+    {
+      "id": "hard_ham/00075.7e1dad2c4dde79ba419379fcad78f2ca",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 287
+    },
+    {
+      "id": "hard_ham/00075.7e1dad2c4dde79ba419379fcad78f2ca",
+      "spam": false,
+      "model": "clef",
+      "score": 0.824,
+      "latencyMs": 383
+    },
+    {
+      "id": "hard_ham/00075.7e1dad2c4dde79ba419379fcad78f2ca",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.6658,
+      "latencyMs": 104
+    },
+    {
+      "id": "hard_ham/00076.5775c01eef4784032d58e85f76c541da",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 274
+    },
+    {
+      "id": "hard_ham/00076.5775c01eef4784032d58e85f76c541da",
+      "spam": false,
+      "model": "clef",
+      "score": 0.4277,
+      "latencyMs": 401
+    },
+    {
+      "id": "hard_ham/00076.5775c01eef4784032d58e85f76c541da",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.8075,
+      "latencyMs": 129
+    },
+    {
+      "id": "hard_ham/00077.5bb73a24591aea238ff4c466aa16c6a5",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 297
+    },
+    {
+      "id": "hard_ham/00077.5bb73a24591aea238ff4c466aa16c6a5",
+      "spam": false,
+      "model": "clef",
+      "score": 0.5139,
+      "latencyMs": 227
+    },
+    {
+      "id": "hard_ham/00077.5bb73a24591aea238ff4c466aa16c6a5",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.799,
+      "latencyMs": 265
+    },
+    {
+      "id": "hard_ham/00078.dc9b31aab52ac120742e5b9cc792897d",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 386
+    },
+    {
+      "id": "hard_ham/00078.dc9b31aab52ac120742e5b9cc792897d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0218,
+      "latencyMs": 333
+    },
+    {
+      "id": "hard_ham/00078.dc9b31aab52ac120742e5b9cc792897d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0355,
+      "latencyMs": 134
+    },
+    {
+      "id": "hard_ham/00079.83c5af8611aed78fc3490033e2ae255d",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 500
+    },
+    {
+      "id": "hard_ham/00079.83c5af8611aed78fc3490033e2ae255d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0708,
+      "latencyMs": 589
+    },
+    {
+      "id": "hard_ham/00079.83c5af8611aed78fc3490033e2ae255d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1544,
+      "latencyMs": 138
+    },
+    {
+      "id": "hard_ham/00080.338dc467b34650c3fb2deebfb49c7279",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 684
+    },
+    {
+      "id": "hard_ham/00080.338dc467b34650c3fb2deebfb49c7279",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0373,
+      "latencyMs": 444
+    },
+    {
+      "id": "hard_ham/00080.338dc467b34650c3fb2deebfb49c7279",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0925,
+      "latencyMs": 125
+    },
+    {
+      "id": "hard_ham/00081.a50816e80775062cf2b291e66137d01b",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 539
+    },
+    {
+      "id": "hard_ham/00081.a50816e80775062cf2b291e66137d01b",
+      "spam": false,
+      "model": "clef",
+      "score": 0.8524,
+      "latencyMs": 316
+    },
+    {
+      "id": "hard_ham/00081.a50816e80775062cf2b291e66137d01b",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.7986,
+      "latencyMs": 136
+    },
+    {
+      "id": "hard_ham/00082.a405e76faf9463d464229306b1e0c93f",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 255
+    },
+    {
+      "id": "hard_ham/00082.a405e76faf9463d464229306b1e0c93f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.7322,
+      "latencyMs": 395
+    },
+    {
+      "id": "hard_ham/00082.a405e76faf9463d464229306b1e0c93f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9444,
+      "latencyMs": 115
+    },
+    {
+      "id": "hard_ham/00083.5c1fe69b6ebb360baac59ddca2b9bda0",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 233
+    },
+    {
+      "id": "hard_ham/00083.5c1fe69b6ebb360baac59ddca2b9bda0",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0993,
+      "latencyMs": 828
+    },
+    {
+      "id": "hard_ham/00083.5c1fe69b6ebb360baac59ddca2b9bda0",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0512,
+      "latencyMs": 116
+    },
+    {
+      "id": "hard_ham/00084.b69a7b9d49f4fef05e0cd50c667f43cc",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 1660
+    },
+    {
+      "id": "hard_ham/00084.b69a7b9d49f4fef05e0cd50c667f43cc",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0289,
+      "latencyMs": 250
+    },
+    {
+      "id": "hard_ham/00084.b69a7b9d49f4fef05e0cd50c667f43cc",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0346,
+      "latencyMs": 175
+    },
+    {
+      "id": "hard_ham/00085.661f10298bde7a7c873f9d90fc343d4d",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 335
+    },
+    {
+      "id": "hard_ham/00085.661f10298bde7a7c873f9d90fc343d4d",
+      "spam": false,
+      "model": "clef",
+      "score": 0.1257,
+      "latencyMs": 563
+    },
+    {
+      "id": "hard_ham/00085.661f10298bde7a7c873f9d90fc343d4d",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.6162,
+      "latencyMs": 122
+    },
+    {
+      "id": "hard_ham/00086.5c80a9cdcc27b05861d4ccef262ddab7",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1084
+    },
+    {
+      "id": "hard_ham/00086.5c80a9cdcc27b05861d4ccef262ddab7",
+      "spam": false,
+      "model": "clef",
+      "score": 0.8912,
+      "latencyMs": 306
+    },
+    {
+      "id": "hard_ham/00086.5c80a9cdcc27b05861d4ccef262ddab7",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.8961,
+      "latencyMs": 98
+    },
+    {
+      "id": "hard_ham/00087.4563348fbfa23de502fee878d59ec671",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 438
+    },
+    {
+      "id": "hard_ham/00087.4563348fbfa23de502fee878d59ec671",
+      "spam": false,
+      "model": "clef",
+      "score": 0.429,
+      "latencyMs": 314
+    },
+    {
+      "id": "hard_ham/00087.4563348fbfa23de502fee878d59ec671",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.8603,
+      "latencyMs": 130
+    },
+    {
+      "id": "hard_ham/00088.1f7a2bd2452833d69c069ea025e5a3da",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 397
+    },
+    {
+      "id": "hard_ham/00088.1f7a2bd2452833d69c069ea025e5a3da",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0215,
+      "latencyMs": 410
+    },
+    {
+      "id": "hard_ham/00088.1f7a2bd2452833d69c069ea025e5a3da",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0352,
+      "latencyMs": 177
+    },
+    {
+      "id": "hard_ham/00089.db1c07c19e44a56e1a4d7b858ff2ef5e",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 860
+    },
+    {
+      "id": "hard_ham/00089.db1c07c19e44a56e1a4d7b858ff2ef5e",
+      "spam": false,
+      "model": "clef",
+      "score": 0.3618,
+      "latencyMs": 310
+    },
+    {
+      "id": "hard_ham/00089.db1c07c19e44a56e1a4d7b858ff2ef5e",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.6383,
+      "latencyMs": 122
+    },
+    {
+      "id": "hard_ham/00090.1c7c81d87c6d0824a52bebe66f186330",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 422
+    },
+    {
+      "id": "hard_ham/00090.1c7c81d87c6d0824a52bebe66f186330",
+      "spam": false,
+      "model": "clef",
+      "score": 0.2301,
+      "latencyMs": 154
+    },
+    {
+      "id": "hard_ham/00090.1c7c81d87c6d0824a52bebe66f186330",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0374,
+      "latencyMs": 146
+    },
+    {
+      "id": "hard_ham/00091.7c3181e801c15b857b81100fba6f0519",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 483
+    },
+    {
+      "id": "hard_ham/00091.7c3181e801c15b857b81100fba6f0519",
+      "spam": false,
+      "model": "clef",
+      "score": 0.027,
+      "latencyMs": 527
+    },
+    {
+      "id": "hard_ham/00091.7c3181e801c15b857b81100fba6f0519",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0278,
+      "latencyMs": 133
+    },
+    {
+      "id": "hard_ham/00092.dea3df11dafb2cdd838b42fc3b9ead09",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 417
+    },
+    {
+      "id": "hard_ham/00092.dea3df11dafb2cdd838b42fc3b9ead09",
+      "spam": false,
+      "model": "clef",
+      "score": 0.0296,
+      "latencyMs": 301
+    },
+    {
+      "id": "hard_ham/00092.dea3df11dafb2cdd838b42fc3b9ead09",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.035,
+      "latencyMs": 250
+    },
+    {
+      "id": "hard_ham/00093.d3befc62e479414b36e08add1a79bed1",
+      "spam": false,
+      "model": "gemma",
+      "score": 0,
+      "latencyMs": 194
+    },
+    {
+      "id": "hard_ham/00093.d3befc62e479414b36e08add1a79bed1",
+      "spam": false,
+      "model": "clef",
+      "score": 0.2499,
+      "latencyMs": 258
+    },
+    {
+      "id": "hard_ham/00093.d3befc62e479414b36e08add1a79bed1",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.6844,
+      "latencyMs": 219
+    },
+    {
+      "id": "hard_ham/00094.2775efe4f46c64a5ec4af86872a1548f",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1081
+    },
+    {
+      "id": "hard_ham/00094.2775efe4f46c64a5ec4af86872a1548f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.4068,
+      "latencyMs": 550
+    },
+    {
+      "id": "hard_ham/00094.2775efe4f46c64a5ec4af86872a1548f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1672,
+      "latencyMs": 121
+    },
+    {
+      "id": "hard_ham/00095.8649aca72a33fe998c9b95ad00dc4d7f",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 633
+    },
+    {
+      "id": "hard_ham/00095.8649aca72a33fe998c9b95ad00dc4d7f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.8196,
+      "latencyMs": 241
+    },
+    {
+      "id": "hard_ham/00095.8649aca72a33fe998c9b95ad00dc4d7f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9321,
+      "latencyMs": 203
+    },
+    {
+      "id": "hard_ham/00096.bfde9cb2286020360aea7e6e5dcbb39e",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 325
+    },
+    {
+      "id": "hard_ham/00096.bfde9cb2286020360aea7e6e5dcbb39e",
+      "spam": false,
+      "model": "clef",
+      "score": 0.2925,
+      "latencyMs": 260
+    },
+    {
+      "id": "hard_ham/00096.bfde9cb2286020360aea7e6e5dcbb39e",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0488,
+      "latencyMs": 110
+    },
+    {
+      "id": "hard_ham/00097.90200a177414673b08df827239a0b9dc",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 264
+    },
+    {
+      "id": "hard_ham/00097.90200a177414673b08df827239a0b9dc",
+      "spam": false,
+      "model": "clef",
+      "score": 0.6787,
+      "latencyMs": 329
+    },
+    {
+      "id": "hard_ham/00097.90200a177414673b08df827239a0b9dc",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.9034,
+      "latencyMs": 121
+    },
+    {
+      "id": "hard_ham/00098.1dcbcaac22d03392c7bcfb4e86bc3c39",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 364
+    },
+    {
+      "id": "hard_ham/00098.1dcbcaac22d03392c7bcfb4e86bc3c39",
+      "spam": false,
+      "model": "clef",
+      "score": 0.8845,
+      "latencyMs": 261
+    },
+    {
+      "id": "hard_ham/00098.1dcbcaac22d03392c7bcfb4e86bc3c39",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.0687,
+      "latencyMs": 199
+    },
+    {
+      "id": "hard_ham/00099.83f69964f7132d2c244a3374b94c285e",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 256
+    },
+    {
+      "id": "hard_ham/00099.83f69964f7132d2c244a3374b94c285e",
+      "spam": false,
+      "model": "clef",
+      "score": 0.077,
+      "latencyMs": 558
+    },
+    {
+      "id": "hard_ham/00099.83f69964f7132d2c244a3374b94c285e",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.1891,
+      "latencyMs": 112
+    },
+    {
+      "id": "hard_ham/00100.78af3dc4c39277a6e1893f287cc2771f",
+      "spam": false,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 387
+    },
+    {
+      "id": "hard_ham/00100.78af3dc4c39277a6e1893f287cc2771f",
+      "spam": false,
+      "model": "clef",
+      "score": 0.2226,
+      "latencyMs": 427
+    },
+    {
+      "id": "hard_ham/00100.78af3dc4c39277a6e1893f287cc2771f",
+      "spam": false,
+      "model": "clef-flash",
+      "score": 0.8071,
+      "latencyMs": 129
+    },
+    {
+      "id": "spam/00001.7848dde101aa985090474a91ec93fcf0",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 296
+    },
+    {
+      "id": "spam/00001.7848dde101aa985090474a91ec93fcf0",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9899,
+      "latencyMs": 206
+    },
+    {
+      "id": "spam/00001.7848dde101aa985090474a91ec93fcf0",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9753,
+      "latencyMs": 169
+    },
+    {
+      "id": "spam/00002.d94f1b97e48ed3b553b3508d116e6a09",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 316
+    },
+    {
+      "id": "spam/00002.d94f1b97e48ed3b553b3508d116e6a09",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9871,
+      "latencyMs": 364
+    },
+    {
+      "id": "spam/00002.d94f1b97e48ed3b553b3508d116e6a09",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9774,
+      "latencyMs": 224
+    },
+    {
+      "id": "spam/00003.2ee33bc6eacdb11f38d052c44819ba6c",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 489
+    },
+    {
+      "id": "spam/00003.2ee33bc6eacdb11f38d052c44819ba6c",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9921,
+      "latencyMs": 403
+    },
+    {
+      "id": "spam/00003.2ee33bc6eacdb11f38d052c44819ba6c",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9757,
+      "latencyMs": 139
+    },
+    {
+      "id": "spam/00004.eac8de8d759b7e74154f142194282724",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 260
+    },
+    {
+      "id": "spam/00004.eac8de8d759b7e74154f142194282724",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9916,
+      "latencyMs": 308
+    },
+    {
+      "id": "spam/00004.eac8de8d759b7e74154f142194282724",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9661,
+      "latencyMs": 157
+    },
+    {
+      "id": "spam/00005.57696a39d7d84318ce497886896bf90d",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 135
+    },
+    {
+      "id": "spam/00005.57696a39d7d84318ce497886896bf90d",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9854,
+      "latencyMs": 186
+    },
+    {
+      "id": "spam/00005.57696a39d7d84318ce497886896bf90d",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9631,
+      "latencyMs": 119
+    },
+    {
+      "id": "spam/00006.5ab5620d3d7c6c0db76234556a16f6c1",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 344
+    },
+    {
+      "id": "spam/00006.5ab5620d3d7c6c0db76234556a16f6c1",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9898,
+      "latencyMs": 459
+    },
+    {
+      "id": "spam/00006.5ab5620d3d7c6c0db76234556a16f6c1",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9747,
+      "latencyMs": 297
+    },
+    {
+      "id": "spam/00007.d8521faf753ff9ee989122f6816f87d7",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 441
+    },
+    {
+      "id": "spam/00007.d8521faf753ff9ee989122f6816f87d7",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9917,
+      "latencyMs": 492
+    },
+    {
+      "id": "spam/00007.d8521faf753ff9ee989122f6816f87d7",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9741,
+      "latencyMs": 114
+    },
+    {
+      "id": "spam/00008.dfd941deb10f5eed78b1594b131c9266",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 4781
+    },
+    {
+      "id": "spam/00008.dfd941deb10f5eed78b1594b131c9266",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9905,
+      "latencyMs": 329
+    },
+    {
+      "id": "spam/00008.dfd941deb10f5eed78b1594b131c9266",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9715,
+      "latencyMs": 202
+    },
+    {
+      "id": "spam/00009.027bf6e0b0c4ab34db3ce0ea4bf2edab",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 297
+    },
+    {
+      "id": "spam/00009.027bf6e0b0c4ab34db3ce0ea4bf2edab",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9907,
+      "latencyMs": 397
+    },
+    {
+      "id": "spam/00009.027bf6e0b0c4ab34db3ce0ea4bf2edab",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9735,
+      "latencyMs": 118
+    },
+    {
+      "id": "spam/00010.445affef4c70feec58f9198cfbc22997",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 289
+    },
+    {
+      "id": "spam/00010.445affef4c70feec58f9198cfbc22997",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9925,
+      "latencyMs": 193
+    },
+    {
+      "id": "spam/00010.445affef4c70feec58f9198cfbc22997",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9745,
+      "latencyMs": 154
+    },
+    {
+      "id": "spam/00011.61816b9ad167657773a427d890d0468e",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 310
+    },
+    {
+      "id": "spam/00011.61816b9ad167657773a427d890d0468e",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9925,
+      "latencyMs": 475
+    },
+    {
+      "id": "spam/00011.61816b9ad167657773a427d890d0468e",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9757,
+      "latencyMs": 131
+    },
+    {
+      "id": "spam/00012.381e4f512915109ba1e0853a7a8407b2",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 400
+    },
+    {
+      "id": "spam/00012.381e4f512915109ba1e0853a7a8407b2",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9916,
+      "latencyMs": 216
+    },
+    {
+      "id": "spam/00012.381e4f512915109ba1e0853a7a8407b2",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9763,
+      "latencyMs": 135
+    },
+    {
+      "id": "spam/00013.d3f0b591a65f116ea5d9d4ad919f83aa",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 452
+    },
+    {
+      "id": "spam/00013.d3f0b591a65f116ea5d9d4ad919f83aa",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9921,
+      "latencyMs": 305
+    },
+    {
+      "id": "spam/00013.d3f0b591a65f116ea5d9d4ad919f83aa",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9745,
+      "latencyMs": 106
+    },
+    {
+      "id": "spam/00014.7d38c46424f24fc8012ac15a95a2ac14",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 339
+    },
+    {
+      "id": "spam/00014.7d38c46424f24fc8012ac15a95a2ac14",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9922,
+      "latencyMs": 574
+    },
+    {
+      "id": "spam/00014.7d38c46424f24fc8012ac15a95a2ac14",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9763,
+      "latencyMs": 123
+    },
+    {
+      "id": "spam/00015.048434ab64c86cf890eda1326a5643f5",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 301
+    },
+    {
+      "id": "spam/00015.048434ab64c86cf890eda1326a5643f5",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9766,
+      "latencyMs": 360
+    },
+    {
+      "id": "spam/00015.048434ab64c86cf890eda1326a5643f5",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9733,
+      "latencyMs": 120
+    },
+    {
+      "id": "spam/00016.67fb281761ca1051a22ec3f21917e7c0",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 339
+    },
+    {
+      "id": "spam/00016.67fb281761ca1051a22ec3f21917e7c0",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9891,
+      "latencyMs": 414
+    },
+    {
+      "id": "spam/00016.67fb281761ca1051a22ec3f21917e7c0",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9718,
+      "latencyMs": 107
+    },
+    {
+      "id": "spam/00017.1a938ecddd047b93cbd7ed92c241e6d1",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 191
+    },
+    {
+      "id": "spam/00017.1a938ecddd047b93cbd7ed92c241e6d1",
+      "spam": true,
+      "model": "clef",
+      "score": 0.992,
+      "latencyMs": 285
+    },
+    {
+      "id": "spam/00017.1a938ecddd047b93cbd7ed92c241e6d1",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9751,
+      "latencyMs": 112
+    },
+    {
+      "id": "spam/00018.5b2765c42b7648d41c93b9b27140b23a",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 319
+    },
+    {
+      "id": "spam/00018.5b2765c42b7648d41c93b9b27140b23a",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9892,
+      "latencyMs": 540
+    },
+    {
+      "id": "spam/00018.5b2765c42b7648d41c93b9b27140b23a",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9725,
+      "latencyMs": 419
+    },
+    {
+      "id": "spam/00019.bbc97ad616ffd06e93ce0f821ca8c381",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 299
+    },
+    {
+      "id": "spam/00019.bbc97ad616ffd06e93ce0f821ca8c381",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9922,
+      "latencyMs": 311
+    },
+    {
+      "id": "spam/00019.bbc97ad616ffd06e93ce0f821ca8c381",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9739,
+      "latencyMs": 172
+    },
+    {
+      "id": "spam/00020.29725cf331fc21e18a1809e7d8b27332",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 291
+    },
+    {
+      "id": "spam/00020.29725cf331fc21e18a1809e7d8b27332",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9885,
+      "latencyMs": 238
+    },
+    {
+      "id": "spam/00020.29725cf331fc21e18a1809e7d8b27332",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9749,
+      "latencyMs": 141
+    },
+    {
+      "id": "spam/00021.effe1449462a9d7ad7af0f1c94b1a237",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 133
+    },
+    {
+      "id": "spam/00021.effe1449462a9d7ad7af0f1c94b1a237",
+      "spam": true,
+      "model": "clef",
+      "score": 0.99,
+      "latencyMs": 366
+    },
+    {
+      "id": "spam/00021.effe1449462a9d7ad7af0f1c94b1a237",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9763,
+      "latencyMs": 92
+    },
+    {
+      "id": "spam/00022.8203cdf03888f656dc0381701148f73d",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 406
+    },
+    {
+      "id": "spam/00022.8203cdf03888f656dc0381701148f73d",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9911,
+      "latencyMs": 342
+    },
+    {
+      "id": "spam/00022.8203cdf03888f656dc0381701148f73d",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9755,
+      "latencyMs": 168
+    },
+    {
+      "id": "spam/00023.b6d27c684f5fc803cfa1060adb2d0805",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 267
+    },
+    {
+      "id": "spam/00023.b6d27c684f5fc803cfa1060adb2d0805",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9918,
+      "latencyMs": 279
+    },
+    {
+      "id": "spam/00023.b6d27c684f5fc803cfa1060adb2d0805",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.975,
+      "latencyMs": 159
+    },
+    {
+      "id": "spam/00024.6b5437b14d403176c3f046c871b5b52f",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 225
+    },
+    {
+      "id": "spam/00024.6b5437b14d403176c3f046c871b5b52f",
+      "spam": true,
+      "model": "clef",
+      "score": 0.988,
+      "latencyMs": 252
+    },
+    {
+      "id": "spam/00024.6b5437b14d403176c3f046c871b5b52f",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9736,
+      "latencyMs": 149
+    },
+    {
+      "id": "spam/00025.619ab8051359048795e3cd09e82ad1a0",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 533
+    },
+    {
+      "id": "spam/00025.619ab8051359048795e3cd09e82ad1a0",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9917,
+      "latencyMs": 421
+    },
+    {
+      "id": "spam/00025.619ab8051359048795e3cd09e82ad1a0",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9742,
+      "latencyMs": 221
+    },
+    {
+      "id": "spam/00026.da18dbed27ae933172f7a70f860c6ad0",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 288
+    },
+    {
+      "id": "spam/00026.da18dbed27ae933172f7a70f860c6ad0",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9892,
+      "latencyMs": 285
+    },
+    {
+      "id": "spam/00026.da18dbed27ae933172f7a70f860c6ad0",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9725,
+      "latencyMs": 110
+    },
+    {
+      "id": "spam/00027.d1d0f97e096fe08fc80a4939355759e7",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 306
+    },
+    {
+      "id": "spam/00027.d1d0f97e096fe08fc80a4939355759e7",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9916,
+      "latencyMs": 376
+    },
+    {
+      "id": "spam/00027.d1d0f97e096fe08fc80a4939355759e7",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9744,
+      "latencyMs": 102
+    },
+    {
+      "id": "spam/00028.ace98eff213f4e6314b5571aece625e1",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 469
+    },
+    {
+      "id": "spam/00028.ace98eff213f4e6314b5571aece625e1",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9919,
+      "latencyMs": 261
+    },
+    {
+      "id": "spam/00028.ace98eff213f4e6314b5571aece625e1",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9614,
+      "latencyMs": 199
+    },
+    {
+      "id": "spam/00029.de865ad8d5ad0df985ae2f72388befba",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 271
+    },
+    {
+      "id": "spam/00029.de865ad8d5ad0df985ae2f72388befba",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9907,
+      "latencyMs": 555
+    },
+    {
+      "id": "spam/00029.de865ad8d5ad0df985ae2f72388befba",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9741,
+      "latencyMs": 117
+    },
+    {
+      "id": "spam/00030.0c9cdd9d4025bd55dac02719ec8d29dc",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 336
+    },
+    {
+      "id": "spam/00030.0c9cdd9d4025bd55dac02719ec8d29dc",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9835,
+      "latencyMs": 221
+    },
+    {
+      "id": "spam/00030.0c9cdd9d4025bd55dac02719ec8d29dc",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9735,
+      "latencyMs": 135
+    },
+    {
+      "id": "spam/00031.a78bb452b3a7376202b5e62a81530449",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 202
+    },
+    {
+      "id": "spam/00031.a78bb452b3a7376202b5e62a81530449",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9287,
+      "latencyMs": 251
+    },
+    {
+      "id": "spam/00031.a78bb452b3a7376202b5e62a81530449",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9714,
+      "latencyMs": 103
+    },
+    {
+      "id": "spam/00032.7b07a09236ce9feb12d80197144d3206",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 303
+    },
+    {
+      "id": "spam/00032.7b07a09236ce9feb12d80197144d3206",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9893,
+      "latencyMs": 494
+    },
+    {
+      "id": "spam/00032.7b07a09236ce9feb12d80197144d3206",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9757,
+      "latencyMs": 126
+    },
+    {
+      "id": "spam/00033.9babb58d9298daa2963d4f514193d7d6",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 260
+    },
+    {
+      "id": "spam/00033.9babb58d9298daa2963d4f514193d7d6",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9915,
+      "latencyMs": 349
+    },
+    {
+      "id": "spam/00033.9babb58d9298daa2963d4f514193d7d6",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9736,
+      "latencyMs": 129
+    },
+    {
+      "id": "spam/00034.8e582263070076dfe6000411d9b13ce6",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 314
+    },
+    {
+      "id": "spam/00034.8e582263070076dfe6000411d9b13ce6",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9917,
+      "latencyMs": 467
+    },
+    {
+      "id": "spam/00034.8e582263070076dfe6000411d9b13ce6",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9775,
+      "latencyMs": 225
+    },
+    {
+      "id": "spam/00035.7ce3307b56dd90453027a6630179282e",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 282
+    },
+    {
+      "id": "spam/00035.7ce3307b56dd90453027a6630179282e",
+      "spam": true,
+      "model": "clef",
+      "score": 0.7282,
+      "latencyMs": 491
+    },
+    {
+      "id": "spam/00035.7ce3307b56dd90453027a6630179282e",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9272,
+      "latencyMs": 105
+    },
+    {
+      "id": "spam/00036.256602e2cb5a5b373bdd1fb631d9f452",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 275
+    },
+    {
+      "id": "spam/00036.256602e2cb5a5b373bdd1fb631d9f452",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9913,
+      "latencyMs": 498
+    },
+    {
+      "id": "spam/00036.256602e2cb5a5b373bdd1fb631d9f452",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9706,
+      "latencyMs": 102
+    },
+    {
+      "id": "spam/00037.21cc985cc36d931916863aed24de8c27",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 2068
+    },
+    {
+      "id": "spam/00037.21cc985cc36d931916863aed24de8c27",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9922,
+      "latencyMs": 349
+    },
+    {
+      "id": "spam/00037.21cc985cc36d931916863aed24de8c27",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9756,
+      "latencyMs": 104
+    },
+    {
+      "id": "spam/00038.8d93819b95ff90bf2e2b141c2909bfc9",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 317
+    },
+    {
+      "id": "spam/00038.8d93819b95ff90bf2e2b141c2909bfc9",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9919,
+      "latencyMs": 413
+    },
+    {
+      "id": "spam/00038.8d93819b95ff90bf2e2b141c2909bfc9",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9779,
+      "latencyMs": 114
+    },
+    {
+      "id": "spam/00039.889d785885f092c269741b11f2124dce",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 276
+    },
+    {
+      "id": "spam/00039.889d785885f092c269741b11f2124dce",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9915,
+      "latencyMs": 533
+    },
+    {
+      "id": "spam/00039.889d785885f092c269741b11f2124dce",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9742,
+      "latencyMs": 104
+    },
+    {
+      "id": "spam/00040.949a3d300eadb91d8745f1c1dab51133",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 256
+    },
+    {
+      "id": "spam/00040.949a3d300eadb91d8745f1c1dab51133",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9852,
+      "latencyMs": 431
+    },
+    {
+      "id": "spam/00040.949a3d300eadb91d8745f1c1dab51133",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9754,
+      "latencyMs": 118
+    },
+    {
+      "id": "spam/00041.f1b3402799046db3c1f143a911dc085d",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 322
+    },
+    {
+      "id": "spam/00041.f1b3402799046db3c1f143a911dc085d",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9919,
+      "latencyMs": 220
+    },
+    {
+      "id": "spam/00041.f1b3402799046db3c1f143a911dc085d",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9749,
+      "latencyMs": 143
+    },
+    {
+      "id": "spam/00042.3e934ba4075f82283d755174d2642b76",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 343
+    },
+    {
+      "id": "spam/00042.3e934ba4075f82283d755174d2642b76",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9918,
+      "latencyMs": 270
+    },
+    {
+      "id": "spam/00042.3e934ba4075f82283d755174d2642b76",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9752,
+      "latencyMs": 108
+    },
+    {
+      "id": "spam/00043.548c447db5d9ba3f5546de96baa9b0e6",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1177
+    },
+    {
+      "id": "spam/00043.548c447db5d9ba3f5546de96baa9b0e6",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9916,
+      "latencyMs": 696
+    },
+    {
+      "id": "spam/00043.548c447db5d9ba3f5546de96baa9b0e6",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9742,
+      "latencyMs": 167
+    },
+    {
+      "id": "spam/00044.9eece8e53a8982c26558b9eb38230bb8",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 272
+    },
+    {
+      "id": "spam/00044.9eece8e53a8982c26558b9eb38230bb8",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9922,
+      "latencyMs": 266
+    },
+    {
+      "id": "spam/00044.9eece8e53a8982c26558b9eb38230bb8",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.977,
+      "latencyMs": 168
+    },
+    {
+      "id": "spam/00045.7282c2c4e009744f2f3450d370009235",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 367
+    },
+    {
+      "id": "spam/00045.7282c2c4e009744f2f3450d370009235",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9918,
+      "latencyMs": 381
+    },
+    {
+      "id": "spam/00045.7282c2c4e009744f2f3450d370009235",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9741,
+      "latencyMs": 143
+    },
+    {
+      "id": "spam/00046.e0fd04360622dbe9250380447f6465cc",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 440
+    },
+    {
+      "id": "spam/00046.e0fd04360622dbe9250380447f6465cc",
+      "spam": true,
+      "model": "clef",
+      "score": 0.991,
+      "latencyMs": 501
+    },
+    {
+      "id": "spam/00046.e0fd04360622dbe9250380447f6465cc",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9747,
+      "latencyMs": 147
+    },
+    {
+      "id": "spam/00047.0d7a240951e460b5884a8886ee64a8c3",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 276
+    },
+    {
+      "id": "spam/00047.0d7a240951e460b5884a8886ee64a8c3",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9905,
+      "latencyMs": 284
+    },
+    {
+      "id": "spam/00047.0d7a240951e460b5884a8886ee64a8c3",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9731,
+      "latencyMs": 189
+    },
+    {
+      "id": "spam/00048.8a64080dbd9d868358a22b655fb1b1cd",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 95
+    },
+    {
+      "id": "spam/00048.8a64080dbd9d868358a22b655fb1b1cd",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9915,
+      "latencyMs": 430
+    },
+    {
+      "id": "spam/00048.8a64080dbd9d868358a22b655fb1b1cd",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.976,
+      "latencyMs": 354
+    },
+    {
+      "id": "spam/00049.09e42d433e0661f264a25c7d4ed6e3ea",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 269
+    },
+    {
+      "id": "spam/00049.09e42d433e0661f264a25c7d4ed6e3ea",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9906,
+      "latencyMs": 410
+    },
+    {
+      "id": "spam/00049.09e42d433e0661f264a25c7d4ed6e3ea",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9752,
+      "latencyMs": 113
+    },
+    {
+      "id": "spam/00050.45de99e8c120fddafe7c89fb3de1c14f",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 287
+    },
+    {
+      "id": "spam/00050.45de99e8c120fddafe7c89fb3de1c14f",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9903,
+      "latencyMs": 410
+    },
+    {
+      "id": "spam/00050.45de99e8c120fddafe7c89fb3de1c14f",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9754,
+      "latencyMs": 283
+    },
+    {
+      "id": "spam/00051.fd20658f0e586d1f27f9396401f4981c",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1598
+    },
+    {
+      "id": "spam/00051.fd20658f0e586d1f27f9396401f4981c",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9916,
+      "latencyMs": 460
+    },
+    {
+      "id": "spam/00051.fd20658f0e586d1f27f9396401f4981c",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9742,
+      "latencyMs": 173
+    },
+    {
+      "id": "spam/00052.edb775ef7470f35cd593d07e5a0466a8",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 215
+    },
+    {
+      "id": "spam/00052.edb775ef7470f35cd593d07e5a0466a8",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9918,
+      "latencyMs": 199
+    },
+    {
+      "id": "spam/00052.edb775ef7470f35cd593d07e5a0466a8",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9747,
+      "latencyMs": 105
+    },
+    {
+      "id": "spam/00053.d88d8b162ca1b7108221fb338cd7d0a5",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 279
+    },
+    {
+      "id": "spam/00053.d88d8b162ca1b7108221fb338cd7d0a5",
+      "spam": true,
+      "model": "clef",
+      "score": 0.992,
+      "latencyMs": 564
+    },
+    {
+      "id": "spam/00053.d88d8b162ca1b7108221fb338cd7d0a5",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9756,
+      "latencyMs": 130
+    },
+    {
+      "id": "spam/00054.62863160db27f89df8c73275b6dae134",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 368
+    },
+    {
+      "id": "spam/00054.62863160db27f89df8c73275b6dae134",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9911,
+      "latencyMs": 424
+    },
+    {
+      "id": "spam/00054.62863160db27f89df8c73275b6dae134",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9745,
+      "latencyMs": 197
+    },
+    {
+      "id": "spam/00055.58adfd0c60ebc04370658a76b9352aa1",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 283
+    },
+    {
+      "id": "spam/00055.58adfd0c60ebc04370658a76b9352aa1",
+      "spam": true,
+      "model": "clef",
+      "score": 0.992,
+      "latencyMs": 231
+    },
+    {
+      "id": "spam/00055.58adfd0c60ebc04370658a76b9352aa1",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9719,
+      "latencyMs": 141
+    },
+    {
+      "id": "spam/00056.c56d61cadd81b4ade0030c8dee384704",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 278
+    },
+    {
+      "id": "spam/00056.c56d61cadd81b4ade0030c8dee384704",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9897,
+      "latencyMs": 370
+    },
+    {
+      "id": "spam/00056.c56d61cadd81b4ade0030c8dee384704",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9445,
+      "latencyMs": 140
+    },
+    {
+      "id": "spam/00057.0a2e17bde9485e999ac2259df38528e2",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 499
+    },
+    {
+      "id": "spam/00057.0a2e17bde9485e999ac2259df38528e2",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9923,
+      "latencyMs": 399
+    },
+    {
+      "id": "spam/00057.0a2e17bde9485e999ac2259df38528e2",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9744,
+      "latencyMs": 114
+    },
+    {
+      "id": "spam/00058.64bb1902c4e561fb3e521a6dbf8625be",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 354
+    },
+    {
+      "id": "spam/00058.64bb1902c4e561fb3e521a6dbf8625be",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9906,
+      "latencyMs": 290
+    },
+    {
+      "id": "spam/00058.64bb1902c4e561fb3e521a6dbf8625be",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9758,
+      "latencyMs": 132
+    },
+    {
+      "id": "spam/00059.dc5b9ea22c6848c97871f0d9576cc931",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 274
+    },
+    {
+      "id": "spam/00059.dc5b9ea22c6848c97871f0d9576cc931",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9918,
+      "latencyMs": 217
+    },
+    {
+      "id": "spam/00059.dc5b9ea22c6848c97871f0d9576cc931",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.976,
+      "latencyMs": 128
+    },
+    {
+      "id": "spam/00060.ec71d52a6f585ace52f4a2a2be2adfce",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 262
+    },
+    {
+      "id": "spam/00060.ec71d52a6f585ace52f4a2a2be2adfce",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9919,
+      "latencyMs": 290
+    },
+    {
+      "id": "spam/00060.ec71d52a6f585ace52f4a2a2be2adfce",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9763,
+      "latencyMs": 129
+    },
+    {
+      "id": "spam/00061.bec763248306fb3228141491856ed216",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 230
+    },
+    {
+      "id": "spam/00061.bec763248306fb3228141491856ed216",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9905,
+      "latencyMs": 431
+    },
+    {
+      "id": "spam/00061.bec763248306fb3228141491856ed216",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.977,
+      "latencyMs": 121
+    },
+    {
+      "id": "spam/00062.3019eac14dfe3c503c03e25e70e63091",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 214
+    },
+    {
+      "id": "spam/00062.3019eac14dfe3c503c03e25e70e63091",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9908,
+      "latencyMs": 345
+    },
+    {
+      "id": "spam/00062.3019eac14dfe3c503c03e25e70e63091",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9761,
+      "latencyMs": 198
+    },
+    {
+      "id": "spam/00063.2334fb4e465fc61e8406c75918ff72ed",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 313
+    },
+    {
+      "id": "spam/00063.2334fb4e465fc61e8406c75918ff72ed",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9919,
+      "latencyMs": 239
+    },
+    {
+      "id": "spam/00063.2334fb4e465fc61e8406c75918ff72ed",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9749,
+      "latencyMs": 177
+    },
+    {
+      "id": "spam/00064.65b95365450ebe5eef61e7f1c60edc5e",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 244
+    },
+    {
+      "id": "spam/00064.65b95365450ebe5eef61e7f1c60edc5e",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9912,
+      "latencyMs": 149
+    },
+    {
+      "id": "spam/00064.65b95365450ebe5eef61e7f1c60edc5e",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9759,
+      "latencyMs": 113
+    },
+    {
+      "id": "spam/00065.6203de135559b319326445aafd68dbca",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 301
+    },
+    {
+      "id": "spam/00065.6203de135559b319326445aafd68dbca",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9746,
+      "latencyMs": 212
+    },
+    {
+      "id": "spam/00065.6203de135559b319326445aafd68dbca",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9745,
+      "latencyMs": 128
+    },
+    {
+      "id": "spam/00066.6afbb1258bcf3e4d59d53c847a84e469",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 361
+    },
+    {
+      "id": "spam/00066.6afbb1258bcf3e4d59d53c847a84e469",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9922,
+      "latencyMs": 322
+    },
+    {
+      "id": "spam/00066.6afbb1258bcf3e4d59d53c847a84e469",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9755,
+      "latencyMs": 435
+    },
+    {
+      "id": "spam/00067.ec108870b01dc3ccb8fabc5def869ca5",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 247
+    },
+    {
+      "id": "spam/00067.ec108870b01dc3ccb8fabc5def869ca5",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9885,
+      "latencyMs": 319
+    },
+    {
+      "id": "spam/00067.ec108870b01dc3ccb8fabc5def869ca5",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9746,
+      "latencyMs": 93
+    },
+    {
+      "id": "spam/00068.d10af636a6082d5172ceb34a944486e6",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 321
+    },
+    {
+      "id": "spam/00068.d10af636a6082d5172ceb34a944486e6",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9923,
+      "latencyMs": 399
+    },
+    {
+      "id": "spam/00068.d10af636a6082d5172ceb34a944486e6",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9757,
+      "latencyMs": 110
+    },
+    {
+      "id": "spam/00069.066b1a012235d062a5da73eead4a6b35",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 9448
+    },
+    {
+      "id": "spam/00069.066b1a012235d062a5da73eead4a6b35",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9914,
+      "latencyMs": 441
+    },
+    {
+      "id": "spam/00069.066b1a012235d062a5da73eead4a6b35",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9701,
+      "latencyMs": 120
+    },
+    {
+      "id": "spam/00070.ab34b6c044a55bef3d6c1f64b7521773",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 287
+    },
+    {
+      "id": "spam/00070.ab34b6c044a55bef3d6c1f64b7521773",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9916,
+      "latencyMs": 303
+    },
+    {
+      "id": "spam/00070.ab34b6c044a55bef3d6c1f64b7521773",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9746,
+      "latencyMs": 117
+    },
+    {
+      "id": "spam/00071.4b7e06d97286ec97820a0f8725878126",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 310
+    },
+    {
+      "id": "spam/00071.4b7e06d97286ec97820a0f8725878126",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9101,
+      "latencyMs": 154
+    },
+    {
+      "id": "spam/00071.4b7e06d97286ec97820a0f8725878126",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.975,
+      "latencyMs": 145
+    },
+    {
+      "id": "spam/00072.d519a73b92f487519c2bc5ba45f5eb2c",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 270
+    },
+    {
+      "id": "spam/00072.d519a73b92f487519c2bc5ba45f5eb2c",
+      "spam": true,
+      "model": "clef",
+      "score": 0.992,
+      "latencyMs": 325
+    },
+    {
+      "id": "spam/00072.d519a73b92f487519c2bc5ba45f5eb2c",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.975,
+      "latencyMs": 201
+    },
+    {
+      "id": "spam/00073.8dcd40346d48c69a9e075e935395e96d",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 317
+    },
+    {
+      "id": "spam/00073.8dcd40346d48c69a9e075e935395e96d",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9804,
+      "latencyMs": 314
+    },
+    {
+      "id": "spam/00073.8dcd40346d48c69a9e075e935395e96d",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9766,
+      "latencyMs": 194
+    },
+    {
+      "id": "spam/00074.51aab41b27a9ba7736803318a2e4c8de",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 242
+    },
+    {
+      "id": "spam/00074.51aab41b27a9ba7736803318a2e4c8de",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9911,
+      "latencyMs": 276
+    },
+    {
+      "id": "spam/00074.51aab41b27a9ba7736803318a2e4c8de",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9749,
+      "latencyMs": 109
+    },
+    {
+      "id": "spam/00075.28a918cd03a0ef5aa2f1e0551a798108",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 259
+    },
+    {
+      "id": "spam/00075.28a918cd03a0ef5aa2f1e0551a798108",
+      "spam": true,
+      "model": "clef",
+      "score": 0.991,
+      "latencyMs": 488
+    },
+    {
+      "id": "spam/00075.28a918cd03a0ef5aa2f1e0551a798108",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9752,
+      "latencyMs": 111
+    },
+    {
+      "id": "spam/00076.066bf704d9c4a3cf45da5ac7a6b684f8",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 391
+    },
+    {
+      "id": "spam/00076.066bf704d9c4a3cf45da5ac7a6b684f8",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9908,
+      "latencyMs": 514
+    },
+    {
+      "id": "spam/00076.066bf704d9c4a3cf45da5ac7a6b684f8",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9752,
+      "latencyMs": 110
+    },
+    {
+      "id": "spam/00077.c85b7442247d61308f15d86aa125ec28",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 264
+    },
+    {
+      "id": "spam/00077.c85b7442247d61308f15d86aa125ec28",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9912,
+      "latencyMs": 166
+    },
+    {
+      "id": "spam/00077.c85b7442247d61308f15d86aa125ec28",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.973,
+      "latencyMs": 93
+    },
+    {
+      "id": "spam/00078.6944f51ce9c0586d8f9137d2d2207df0",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1015
+    },
+    {
+      "id": "spam/00078.6944f51ce9c0586d8f9137d2d2207df0",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9913,
+      "latencyMs": 242
+    },
+    {
+      "id": "spam/00078.6944f51ce9c0586d8f9137d2d2207df0",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9735,
+      "latencyMs": 132
+    },
+    {
+      "id": "spam/00079.cc3fa7d977a44a09d450dde5db161c37",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 501
+    },
+    {
+      "id": "spam/00079.cc3fa7d977a44a09d450dde5db161c37",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9915,
+      "latencyMs": 597
+    },
+    {
+      "id": "spam/00079.cc3fa7d977a44a09d450dde5db161c37",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.975,
+      "latencyMs": 107
+    },
+    {
+      "id": "spam/00080.5a7386cb47846dfef68429241ad80354",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 394
+    },
+    {
+      "id": "spam/00080.5a7386cb47846dfef68429241ad80354",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9166,
+      "latencyMs": 555
+    },
+    {
+      "id": "spam/00080.5a7386cb47846dfef68429241ad80354",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9666,
+      "latencyMs": 124
+    },
+    {
+      "id": "spam/00081.123b29a781b2e8c83763e5d440e672a3",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 406
+    },
+    {
+      "id": "spam/00081.123b29a781b2e8c83763e5d440e672a3",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9891,
+      "latencyMs": 623
+    },
+    {
+      "id": "spam/00081.123b29a781b2e8c83763e5d440e672a3",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9764,
+      "latencyMs": 151
+    },
+    {
+      "id": "spam/00082.0341a767bbaca01fd89b6236ef681257",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 440
+    },
+    {
+      "id": "spam/00082.0341a767bbaca01fd89b6236ef681257",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9921,
+      "latencyMs": 840
+    },
+    {
+      "id": "spam/00082.0341a767bbaca01fd89b6236ef681257",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9733,
+      "latencyMs": 114
+    },
+    {
+      "id": "spam/00083.c1891c507954e5b75b72b16712e799bf",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 483
+    },
+    {
+      "id": "spam/00083.c1891c507954e5b75b72b16712e799bf",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9827,
+      "latencyMs": 409
+    },
+    {
+      "id": "spam/00083.c1891c507954e5b75b72b16712e799bf",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9764,
+      "latencyMs": 125
+    },
+    {
+      "id": "spam/00084.a9f5b3a9b7feb7070f25ae76320c8ec6",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 401
+    },
+    {
+      "id": "spam/00084.a9f5b3a9b7feb7070f25ae76320c8ec6",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9914,
+      "latencyMs": 661
+    },
+    {
+      "id": "spam/00084.a9f5b3a9b7feb7070f25ae76320c8ec6",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9742,
+      "latencyMs": 115
+    },
+    {
+      "id": "spam/00085.f63a9484ac582233db057dbb45dc0eaf",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 295
+    },
+    {
+      "id": "spam/00085.f63a9484ac582233db057dbb45dc0eaf",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9917,
+      "latencyMs": 433
+    },
+    {
+      "id": "spam/00085.f63a9484ac582233db057dbb45dc0eaf",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9762,
+      "latencyMs": 101
+    },
+    {
+      "id": "spam/00086.9c945bb90f76a8b76331599106c28429",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 2807
+    },
+    {
+      "id": "spam/00086.9c945bb90f76a8b76331599106c28429",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9899,
+      "latencyMs": 644
+    },
+    {
+      "id": "spam/00086.9c945bb90f76a8b76331599106c28429",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9774,
+      "latencyMs": 125
+    },
+    {
+      "id": "spam/00087.f09438ca6392721e63696f4f753effbb",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 601
+    },
+    {
+      "id": "spam/00087.f09438ca6392721e63696f4f753effbb",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9908,
+      "latencyMs": 462
+    },
+    {
+      "id": "spam/00087.f09438ca6392721e63696f4f753effbb",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9742,
+      "latencyMs": 117
+    },
+    {
+      "id": "spam/00088.1673f91313df07da1a18b2fc458dd4c4",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 1534
+    },
+    {
+      "id": "spam/00088.1673f91313df07da1a18b2fc458dd4c4",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9819,
+      "latencyMs": 528
+    },
+    {
+      "id": "spam/00088.1673f91313df07da1a18b2fc458dd4c4",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9724,
+      "latencyMs": 100
+    },
+    {
+      "id": "spam/00089.7e7baae6ef4a8fb945d7b3fe551329fe",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 574
+    },
+    {
+      "id": "spam/00089.7e7baae6ef4a8fb945d7b3fe551329fe",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9924,
+      "latencyMs": 356
+    },
+    {
+      "id": "spam/00089.7e7baae6ef4a8fb945d7b3fe551329fe",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9763,
+      "latencyMs": 116
+    },
+    {
+      "id": "spam/00090.52630c4c07cd069c7bc7658c1a7a7253",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 668
+    },
+    {
+      "id": "spam/00090.52630c4c07cd069c7bc7658c1a7a7253",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9886,
+      "latencyMs": 279
+    },
+    {
+      "id": "spam/00090.52630c4c07cd069c7bc7658c1a7a7253",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9718,
+      "latencyMs": 281
+    },
+    {
+      "id": "spam/00091.bcaf9648660ba372bc4d542aa06456ad",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 630
+    },
+    {
+      "id": "spam/00091.bcaf9648660ba372bc4d542aa06456ad",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9921,
+      "latencyMs": 547
+    },
+    {
+      "id": "spam/00091.bcaf9648660ba372bc4d542aa06456ad",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9744,
+      "latencyMs": 121
+    },
+    {
+      "id": "spam/00092.8ca54ce0c31e6149b5ef05c0108743be",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 370
+    },
+    {
+      "id": "spam/00092.8ca54ce0c31e6149b5ef05c0108743be",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9892,
+      "latencyMs": 255
+    },
+    {
+      "id": "spam/00092.8ca54ce0c31e6149b5ef05c0108743be",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9755,
+      "latencyMs": 135
+    },
+    {
+      "id": "spam/00093.ca4edc32d2ff8e1dbb5f9c0b15ec435b",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 893
+    },
+    {
+      "id": "spam/00093.ca4edc32d2ff8e1dbb5f9c0b15ec435b",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9895,
+      "latencyMs": 288
+    },
+    {
+      "id": "spam/00093.ca4edc32d2ff8e1dbb5f9c0b15ec435b",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9722,
+      "latencyMs": 120
+    },
+    {
+      "id": "spam/00094.7f704c47988221c18cb6a620409442b8",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 854
+    },
+    {
+      "id": "spam/00094.7f704c47988221c18cb6a620409442b8",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9922,
+      "latencyMs": 368
+    },
+    {
+      "id": "spam/00094.7f704c47988221c18cb6a620409442b8",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.977,
+      "latencyMs": 150
+    },
+    {
+      "id": "spam/00095.17594a58d6736a8f6a1990b0b92090cd",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 411
+    },
+    {
+      "id": "spam/00095.17594a58d6736a8f6a1990b0b92090cd",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9919,
+      "latencyMs": 419
+    },
+    {
+      "id": "spam/00095.17594a58d6736a8f6a1990b0b92090cd",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9759,
+      "latencyMs": 124
+    },
+    {
+      "id": "spam/00096.a791864be5f1205bf2cea0adf241b25a",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 395
+    },
+    {
+      "id": "spam/00096.a791864be5f1205bf2cea0adf241b25a",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9821,
+      "latencyMs": 227
+    },
+    {
+      "id": "spam/00096.a791864be5f1205bf2cea0adf241b25a",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9749,
+      "latencyMs": 127
+    },
+    {
+      "id": "spam/00097.013347cc91e7d0915074dccb0428883f",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 539
+    },
+    {
+      "id": "spam/00097.013347cc91e7d0915074dccb0428883f",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9926,
+      "latencyMs": 337
+    },
+    {
+      "id": "spam/00097.013347cc91e7d0915074dccb0428883f",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9771,
+      "latencyMs": 122
+    },
+    {
+      "id": "spam/00098.f1f1a3bd3ec32d8e967fba2a7a03e1e5",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 356
+    },
+    {
+      "id": "spam/00098.f1f1a3bd3ec32d8e967fba2a7a03e1e5",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9922,
+      "latencyMs": 306
+    },
+    {
+      "id": "spam/00098.f1f1a3bd3ec32d8e967fba2a7a03e1e5",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9728,
+      "latencyMs": 112
+    },
+    {
+      "id": "spam/00099.d41a21dc96bb3c3342292f7c9fa4db1e",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 462
+    },
+    {
+      "id": "spam/00099.d41a21dc96bb3c3342292f7c9fa4db1e",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9923,
+      "latencyMs": 455
+    },
+    {
+      "id": "spam/00099.d41a21dc96bb3c3342292f7c9fa4db1e",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9769,
+      "latencyMs": 118
+    },
+    {
+      "id": "spam/00100.81611d62ec1f172be947fda4af7caa2c",
+      "spam": true,
+      "model": "gemma",
+      "score": 1,
+      "latencyMs": 503
+    },
+    {
+      "id": "spam/00100.81611d62ec1f172be947fda4af7caa2c",
+      "spam": true,
+      "model": "clef",
+      "score": 0.9909,
+      "latencyMs": 356
+    },
+    {
+      "id": "spam/00100.81611d62ec1f172be947fda4af7caa2c",
+      "spam": true,
+      "model": "clef-flash",
+      "score": 0.9768,
+      "latencyMs": 240
+    }
+  ]
+}

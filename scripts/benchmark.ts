@@ -6,8 +6,11 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import { simpleParser } from 'mailparser';
 
 const WORKER_URL = process.env.WORKER_URL ?? 'http://127.0.0.1:8787';
-const PER_GROUP = 100; // messages per group -> 300 emails, 900 requests
+const BENCHMARK_TOKEN = process.env.BENCHMARK_TOKEN;
+if (!BENCHMARK_TOKEN) throw new Error('BENCHMARK_TOKEN is required');
+const PER_GROUP = Number(process.env.PER_GROUP ?? 100); // messages per group -> 300 emails, 900 requests by default
 const BATCH = 2; // emails in flight at once (x3 models)
+if (!Number.isSafeInteger(PER_GROUP) || PER_GROUP < 1) throw new Error('PER_GROUP must be a positive integer');
 const MODELS = ['gemma', 'clef', 'clef-flash'] as const;
 type Model = (typeof MODELS)[number];
 
@@ -100,22 +103,40 @@ interface ModelOutput {
 	choices?: Array<{ message?: { content?: unknown } }>;
 }
 
-/** P(spam) in [0, 1]; null when Gemma says "unsure" or the output is unreadable. */
+/** P(spam) in [0, 1]; null only when Gemma explicitly says "unsure". */
 function spamScore(model: Model, result: ModelOutput): number | null {
-	if (model !== 'gemma') return typeof result.answers?.spam?.noul === 'number' ? result.answers.spam.noul : null;
-	const verdict = /"verdict"\s*:\s*"(spam|ham|unsure)"/i.exec(String(result.choices?.[0]?.message?.content ?? ''))?.[1]?.toLowerCase();
-	return verdict === 'spam' ? 1 : verdict === 'ham' ? 0 : null;
+	if (model !== 'gemma') {
+		const score = result.answers?.spam?.noul;
+		if (typeof score !== 'number' || !Number.isFinite(score) || score < 0 || score > 1) throw new Error('Invalid Clef spam probability');
+		return score;
+	}
+	const content = result.choices?.[0]?.message?.content;
+	let verdict: unknown;
+	try {
+		verdict = JSON.parse(String(content)).verdict;
+	} catch {
+		throw new Error('Invalid Gemma JSON verdict');
+	}
+	if (verdict === 'spam') return 1;
+	if (verdict === 'ham') return 0;
+	if (verdict === 'unsure') return null;
+	throw new Error('Invalid Gemma verdict');
 }
 
 async function classify(model: Model, email: string) {
 	try {
 		const res = await fetch(WORKER_URL, {
 			method: 'POST',
-			headers: { 'content-type': 'application/json' },
+			headers: { 'content-type': 'application/json', authorization: `Bearer ${BENCHMARK_TOKEN}` },
 			body: JSON.stringify({ model, input: modelInput(model, email) }),
 			signal: AbortSignal.timeout(60_000),
 		});
-		if (!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
+		if (!res.ok) {
+			const detail = await res.text();
+			const message =
+				detail.match(/error code: \d+/)?.[0] ?? (detail.startsWith('<!DOCTYPE html>') ? 'see Wrangler logs' : detail.slice(0, 300));
+			throw new Error(`HTTP ${res.status}: ${message}`);
+		}
 		const { result, latencyMs } = (await res.json()) as { result: ModelOutput; latencyMs: number };
 		return { score: spamScore(model, result), latencyMs };
 	} catch (error) {
@@ -131,6 +152,9 @@ interface Row {
 	latencyMs?: number;
 	error?: string;
 }
+
+const worker = await fetch(WORKER_URL, { signal: AbortSignal.timeout(5_000) });
+if (worker.status !== 405) throw new Error(`Expected benchmark Worker at ${WORKER_URL} (GET returned HTTP ${worker.status})`);
 
 const rows: Row[] = [];
 for (const group of GROUPS) {
@@ -150,6 +174,8 @@ for (const group of GROUPS) {
 				),
 			)),
 		);
+		if (rows.length === emails.length * MODELS.length && rows.every((r) => r.error))
+			throw new Error(`All inferences failed in the first batch: ${rows[0].error}`);
 		console.error(`${group.name}: ${Math.min(i + BATCH, files.length)}/${files.length}`);
 	}
 }

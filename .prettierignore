@@ -4,3 +4,4 @@ node_modules/
 worker-configuration.d.ts
 package-lock.json
 results/
+results.json
